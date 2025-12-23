@@ -9,6 +9,70 @@
   </head>
 
   <body class="page-body">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">
+            <img src="/__spritemap#sprite-logo-view" width="30" height="30" alt="Логотип Internship">
+          </div>
+          <button class="button header__menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
+            Меню
+            <span class="header__menu-burger" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <nav class="header__navigation" id="site-navigation" aria-label="Основная навигация" aria-hidden="true">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#about">О проекте</a>
+            </li>
+            <li class="header__navigation-item">
+              <button class="header__navigation-toggle" type="button" aria-expanded="false" aria-controls="programs-submenu">Программы</button>
+              <ul class="header__subnavigation" id="programs-submenu">
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Стажировки</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Волонтерство</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Учеба</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Религия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#grant">Как поехать</a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="header__navigation-item">
+              <button class="header__navigation-toggle" type="button" aria-expanded="false" aria-controls="news-submenu">Новости</button>
+              <ul class="header__subnavigation" id="news-submenu">
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Интервью с участницей программы стажировки</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Путешествуем по миру</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Новая программа волонтёрства</a>
+                </li>
+                <li class="header__subnavigation-item">
+                  <a class="header__subnavigation-link" href="#">Построй свою карьеру</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <!-- пример использования спрайта -->
     <!-- <img src="/__spritemap#sprite-logo-view" width="410" height="400" alt="Это спрайт">
