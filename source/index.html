@@ -230,6 +230,92 @@
           </div>
         </div>
       </section>
+
+      <section class="section news" id="news">
+        <div class="container">
+          <h2 class="section__title">Новости и материалы</h2>
+          <ul class="news__filters">
+            <li class="news__filters-item">
+              <button class="news__filters-tab news__filters-tab--active" type="button" aria-pressed="true">Общее</button>
+            </li>
+            <li class="news__filters-item">
+              <button class="news__filters-tab" type="button">Волонтёрство</button>
+            </li>
+            <li class="news__filters-item">
+              <button class="news__filters-tab" type="button">Стажировки</button>
+            </li>
+            <li class="news__filters-item">
+              <button class="news__filters-tab" type="button">Карьера</button>
+            </li>
+            <li class="news__filters-item">
+              <button class="news__filters-tab" type="button">Путешествия</button>
+            </li>
+          </ul>
+
+          <div class="news__slider swiper">
+            <div class="swiper-wrapper" id="news-list">
+              <div class="news__slide swiper-slide">
+                <div class="news__slide-content">
+                  <time datetime="2023-03-23">23/03/2023</time>
+                  <h3 class="news__slide-title">Интервью с участницей программы стажировки</h3>
+                  <div class="news__slide-container">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                    <a class="icon-button" href="#">
+                      <span class="visually-hidden">Читать полностью</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="news__slide swiper-slide">
+                <div class="news__slide-content">
+                  <time datetime="2023-03-20">20/03/2023</time>
+                  <h3 class="news__slide-title">Путешествуем по миру</h3>
+                  <div class="news__slide-container">
+                    <p>Какие места посещают наши студенты весной</p>
+                    <a class="icon-button" href="#">
+                      <span class="visually-hidden">Читать полностью</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="news__slide swiper-slide">
+                <div class="news__slide-content">
+                  <time datetime="2023-03-17">17/03/2023</time>
+                  <h3 class="news__slide-title">Новая программа волонтёрства</h3>
+                  <div class="news__slide-container">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a class="icon-button" href="#">
+                      <span class="visually-hidden">Читать полностью</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="news__slide swiper-slide">
+                <div class="news__slide-content">
+                  <time datetime="2023-03-10">10/03/2023</time>
+                  <h3 class="news__slide-title">Построй свою карьеру</h3>
+                  <div class="news__slide-container">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a class="icon-button" href="#">
+                      <span class="visually-hidden">Читать полностью</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__pagination swiper-pagination"></div>
+
+            <nav class="news__navigation">
+              <button class="swiper-button-prev" type="button" aria-controls="news-list">
+                <span class="visually-hidden">Показать предыдущий</span>
+              </button>
+              <button class="swiper-button-next" type="button" aria-controls="news-list">
+                <span class="visually-hidden">Показать следующий</span>
+              </button>
+            </nav>
+          </div>
+      </section>
     </main>
 
     <!-- пример использования спрайта -->
