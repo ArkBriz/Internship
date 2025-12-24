@@ -456,24 +456,45 @@
                   <label class="form__label" for="name">Имя</label>
                   <input class="form__input" type="text" id="name" name="name" required>
                 </div>
+
                 <div class="form__group">
                   <label class="form__label" for="phone">Телефон</label>
                   <input class="form__input" type="tel" id="phone" name="phone" inputmode="tel" pattern="^\+7\s?\(\d{3}\)\s?\d{3}\-\d{2}\-\d{2}$" required>
                 </div>
+
                 <div class="form__group">
                   <label class="form__label" for="message">Ваше сообщение</label>
                   <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
                 </div>
+
                 <div class="form__group">
-                  <label class="form__label" for="city">Выберите город</label>
-                  <select class="form__select" id="city" name="city" required>
+                  <label class="form__label" for="city" id="city-label">Выберите город</label>
+                  <select class="visually-hidden" id="city" name="city" aria-labelledby="city-label" required>
                     <option value="" disabled selected></option>
                     <option value="saint-petersburg">Санкт-Петербург</option>
                     <option value="moscow">Москва</option>
                     <option value="yekaterinburg">Екатеринбург</option>
                     <option value="novosibirsk">Новосибирск</option>
                   </select>
+
+                  <div class="custom-select">
+                    <button class="custom-select__button"
+                            type="button"  role="combobox"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-controls="custom-listbox"
+                            aria-labelledby="city-label custom-select-button-text">
+                      <span class="custom-select__button-text" id="custom-select-button-text">Выберите город</span>
+                    </button>
+
+                    <ul class="custom-select__list" id="custom-listbox" role="listbox">
+                      <li class="custom-select__option" role="option" data-value="saint-petersburg" tabindex="-1">Санкт-Петербург</li>
+                      <li class="custom-select__option" role="option" data-value="moscow" tabindex="-1">Москва</li>
+                      <li class="custom-select__option" role="option" data-value="yekaterinburg" tabindex="-1">Екатеринбург</li>
+                      <li class="custom-select__option" role="option" data-value="novosibirsk" tabindex="-1">Новосибирск</li>
+                    </ul>
                 </div>
+
                 <div class="form__group">
                   <label class="form__checkbox-label">
                     <input class="form__checkbox-input" type="checkbox" name="consent" required>
@@ -497,7 +518,7 @@
           <img src="/__spritemap#sprite-logo-view" width="30" height="30" alt="Логотип Internship">
         </div>
 
-        <nav class="footer__nav">
+        <nav class="footer__nav" aria-label="Навигация по сайту">
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="#about">О проекте</a>
@@ -545,6 +566,69 @@
         </ul>
       </div>
     </footer>
+
+    <!-- В открытом состоянии добавить атрибуты  role="dialog" aria-modal="true" aria-labelledby="modal-title" -->
+    <div class="modal" aria-hidden="true">
+      <div class="modal__overlay"></div>
+      <div class="modal__body">
+        <button class="modal__close-button" type="button" aria-label="Закрыть окно"></button>
+        <div class="modal__content">
+          <h2 class="modal__title" id="modal-title">Напишите нам</h2>
+          <p class="modal__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+
+          <form class="form form--light" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__group">
+              <label class="form__label" for="modal-name">Имя</label>
+              <input class="form__input" type="text" id="modal-name" name="name" required>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="modal-phone">Телефон</label>
+              <input class="form__input" type="tel" id="modal-phone" name="phone" inputmode="tel" pattern="^\+7\s?\(\d{3}\)\s?\d{3}\-\d{2}\-\d{2}$" required>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="modal-city" id="modal-city-label">Выберите город</label>
+              <select class="visually-hidden" id="modal-city" name="city" aria-labelledby="modal-city-label" required>
+                <option value="" disabled selected></option>
+                <option value="saint-petersburg">Санкт-Петербург</option>
+                <option value="moscow">Москва</option>
+                <option value="yekaterinburg">Екатеринбург</option>
+                <option value="novosibirsk">Новосибирск</option>
+              </select>
+
+              <div class="custom-select">
+                <button class="custom-select__button"
+                        type="button" role="combobox"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-controls="modal-custom-listbox"
+                        aria-labelledby="modal-city-label modal-custom-select-button-text">
+                  <span class="custom-select__button-text" id="modal-custom-select-button-text">Выберите город</span>
+                </button>
+
+                <ul class="custom-select__list" id="modal-custom-listbox" role="listbox">
+                  <li class="custom-select__option" role="option" data-value="saint-petersburg" tabindex="-1">Санкт-Петербург</li>
+                  <li class="custom-select__option" role="option" data-value="moscow" tabindex="-1">Москва</li>
+                  <li class="custom-select__option" role="option" data-value="yekaterinburg" tabindex="-1">Екатеринбург</li>
+                  <li class="custom-select__option" role="option" data-value="novosibirsk" tabindex="-1">Новосибирск</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__checkbox-label">
+                <input class="form__checkbox-input" type="checkbox" name="consent" required>
+                <span class="form__checkbox-text">Я согласен на обработку моих персональных данных</span>
+              </label>
+            </div>
+
+            <button class="button form__submit-button" type="submit">Отправить
+              <span class="button-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+      </div>
+    </div>
 
     <!-- пример использования спрайта -->
     <!-- <img src="/__spritemap#sprite-logo-view" width="410" height="400" alt="Это спрайт">
