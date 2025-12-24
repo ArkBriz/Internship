@@ -443,6 +443,52 @@
             <img src="img/map-stub.jpg" width="290" height="240" alt="Карта с расположением центрального офиса по адресу: г. Новосибирск, ул. Щетинкина 68">
           </div>
       </section>
+
+      <section class="form-section">
+        <div class="container">
+          <div class="form-section__container">
+            <div class="form-section__inner">
+              <h2 class="form-section__title">Напишите нам</h2>
+              <p class="form-section__subtitle">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+
+              <form class="form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="form__group">
+                  <label class="form__label" for="name">Имя</label>
+                  <input class="form__input" type="text" id="name" name="name" required>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="phone">Телефон</label>
+                  <input class="form__input" type="tel" id="phone" name="phone" inputmode="tel" pattern="^\+7\s?\(\d{3}\)\s?\d{3}\-\d{2}\-\d{2}$" required>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="message">Ваше сообщение</label>
+                  <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="city">Выберите город</label>
+                  <select class="form__select" id="city" name="city" required>
+                    <option value="" disabled selected></option>
+                    <option value="saint-petersburg">Санкт-Петербург</option>
+                    <option value="moscow">Москва</option>
+                    <option value="yekaterinburg">Екатеринбург</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__checkbox-label">
+                    <input class="form__checkbox-input" type="checkbox" name="consent" required>
+                    <span class="form__checkbox-text">Я согласен на обработку моих персональных данных</span>
+                  </label>
+                </div>
+
+                <button class="button form__submit-button" type="submit">Отправить
+                  <span class="button-icon" aria-hidden="true"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- пример использования спрайта -->
