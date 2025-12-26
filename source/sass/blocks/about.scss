@@ -1,8 +1,4 @@
-.about {
-  margin-bottom: 60px;
-}
-
-.about__block {
+.about__block:not(:last-child) {
   margin-bottom: 40px;
 
   @include media("desktop") {

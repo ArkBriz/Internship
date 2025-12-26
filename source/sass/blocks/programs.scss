@@ -1,0 +1,41 @@
+.programs__slide {
+  min-height: 290px;
+  background-color: $white;
+  border-radius: 12px;
+}
+
+.programs__slide-title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $blue;
+
+  @include media("tablet") {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @include media("desktop") {
+    font-size: 24px;
+    line-height: 17px;
+  }
+}
+
+.programs__slide-content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: $black;
+
+  @include media("tablet") {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include media("desktop") {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
