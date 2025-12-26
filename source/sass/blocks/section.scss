@@ -1,0 +1,25 @@
+.section__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $blue;
+
+  .about & {
+    margin-bottom: 15px;
+  }
+
+  @include media("tablet") {
+    font-size: 34px;
+    line-height: 50px;
+
+    .about & {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media("desktop") {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
