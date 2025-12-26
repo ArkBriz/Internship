@@ -1,0 +1,13 @@
+@mixin media($breakpoint) {
+  @if $breakpoint == "desktop" {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "tablet" {
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
+}

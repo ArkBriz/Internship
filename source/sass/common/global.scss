@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+
+  background-color: $beige;
+  overflow-wrap: anywhere;
+
+  @include media("tablet") {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(100%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow: hidden;
+
+  @include media("tablet") {
+    max-width: 768px;
+    padding: 0 45px;
+  }
+
+  @include media("desktop") {
+    max-width: 1440px;
+    padding: 0 100px;
+  }
+}
