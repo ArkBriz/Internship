@@ -1,0 +1,29 @@
+.custom-select__list {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  color: $black;
+  background-color: $white;
+  border-radius: 8px;
+  list-style-type: none;
+}
+
+.custom-select__button {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 17px 20px;
+  font-size: 14px;
+  line-height: 1;
+  color: $white;
+  background-color: $blue;
+  border: 1px solid rgba($white, 0.3);
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-select__option {
+  padding: 17px 20px;
+  cursor: pointer;
+}

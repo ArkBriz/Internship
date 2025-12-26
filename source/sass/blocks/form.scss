@@ -1,0 +1,47 @@
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.8;
+
+  @include media("tablet") {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include media("desktop") {
+    line-height: 18px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  background-color: $blue;
+  border: 1px solid rgba($white, 0.3);
+  border-radius: 8px;
+
+  @include media("tablet") {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 18px;
+  }
+}
+
+.form__checkbox-text {
+  font-size: 12px;
+  line-height: 14px;
+
+  @include media("tablet") {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

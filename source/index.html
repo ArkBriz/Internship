@@ -442,14 +442,14 @@
           </div>
       </section>
 
-      <section class="form-section">
+      <section class="section feedback">
         <div class="container">
-          <div class="form-section__container">
-            <div class="form-section__inner">
-              <h2 class="form-section__title">Напишите нам</h2>
-              <p class="form-section__subtitle">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <div class="feedback__container">
+            <div class="feedback__inner">
+              <h2 class="feedback__title">Напишите нам</h2>
+              <p class="feedback__subtitle">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
 
-              <form class="form" action="https://echo.htmlacademy.ru" method="post">
+              <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__group">
                   <label class="form__label" for="name">Имя</label>
                   <input class="form__input" type="text" id="name" name="name" required>
@@ -462,7 +462,7 @@
 
                 <div class="form__group">
                   <label class="form__label" for="message">Ваше сообщение</label>
-                  <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
+                  <textarea class="form__input" id="message" name="message" rows="3" required></textarea>
                 </div>
 
                 <div class="form__group">
@@ -491,6 +491,7 @@
                       <li class="custom-select__option" role="option" data-value="yekaterinburg" tabindex="-1">Екатеринбург</li>
                       <li class="custom-select__option" role="option" data-value="novosibirsk" tabindex="-1">Новосибирск</li>
                     </ul>
+                  </div>
                 </div>
 
                 <div class="form__group">
@@ -500,8 +501,8 @@
                   </label>
                 </div>
 
-                <button class="button form__submit-button" type="submit">Отправить
-                  <span class="button-icon" aria-hidden="true"></span>
+                <button class="button button--dark" type="submit">Отправить
+                  <span class="button-icon button-icon--light" aria-hidden="true"></span>
                 </button>
               </form>
             </div>

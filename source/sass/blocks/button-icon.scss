@@ -4,4 +4,8 @@
   height: 30px;
   background-color: $blue;
   border-radius: 50%;
+
+  &--light {
+    background-color: $white;
+  }
 }
