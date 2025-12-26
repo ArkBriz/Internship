@@ -1,0 +1,31 @@
+.grant__subtitle {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+
+  @include media("tablet") {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.grant__steps-list {
+  margin: 0;
+  padding: 0;
+  // list-style: none;
+}
+
+.grant__steps-time {
+  @include media("desktop") {
+    line-height: 26px;
+  }
+}

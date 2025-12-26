@@ -1,6 +1,20 @@
 .section {
   padding-block: 50px;
 
+  &--highlight {
+    padding-block: 70px;
+    color: $white;
+    background-color: $blue;
+
+    @include media("tablet") {
+      padding-block: 100px;
+    }
+
+    @include media("desktop") {
+      padding-block: 120px;
+    }
+  }
+
   @include media("desktop") {
     padding-block: 60px;
   }
@@ -13,21 +27,26 @@
   font-weight: 400;
   color: $blue;
 
-  .about & {
-    margin-bottom: 15px;
-  }
-
   @include media("tablet") {
     font-size: 34px;
     line-height: 50px;
-
-    .about & {
-      margin-bottom: 30px;
-    }
   }
 
   @include media("desktop") {
     font-size: 50px;
     line-height: 50px;
+  }
+}
+
+.section--highlight .section__title {
+  color: $white;
+}
+
+.about .section__title,
+.grant .section__title {
+  margin-bottom: 15px;
+
+  @include media("tablet") {
+    margin-bottom: 30px;
   }
 }
