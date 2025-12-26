@@ -38,8 +38,4 @@
   margin: 0;
   color: $white;
   background-color: $blue;
-
-  @include media("desktop") {
-    line-height: 26px;
-  }
 }

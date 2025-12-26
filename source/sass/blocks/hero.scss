@@ -27,8 +27,4 @@
     margin-bottom: 0;
     font-size: 16px;
   }
-
-  @include media("desktop") {
-    line-height: 26px;
-  }
 }

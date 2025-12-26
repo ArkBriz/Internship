@@ -23,9 +23,3 @@
   padding: 0;
   // list-style: none;
 }
-
-.grant__steps-time {
-  @include media("desktop") {
-    line-height: 26px;
-  }
-}
