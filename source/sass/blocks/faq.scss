@@ -1,0 +1,45 @@
+.faq__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.faq__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.faq__question {
+  padding: 25px 84px 25px 18px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $blue;
+  text-align: left;
+  background-color: inherit;
+  border: 2px solid $blue;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @include media("tablet") {
+    padding: 40px 82px 40px 32px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include media("desktop") {
+    padding: 42px 92px 42px 42px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.faq__question + p {
+  margin: 0;
+  color: $white;
+  background-color: $blue;
+
+  @include media("desktop") {
+    line-height: 26px;
+  }
+}

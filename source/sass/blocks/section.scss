@@ -62,3 +62,16 @@
     margin-bottom: 40px;
   }
 }
+
+.faq .section__title {
+  margin-bottom: 30px;
+
+  @include media("tablet") {
+    margin-bottom: 40px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 70px;
+  }
+}
+
