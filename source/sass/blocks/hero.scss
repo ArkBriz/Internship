@@ -80,16 +80,3 @@
     margin-left: 85px;
   }
 }
-
-.hero__slide-button .button-icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 5px;
-  margin: auto;
-
-  @include media("tablet") {
-    width: 46px;
-    height: 46px;
-  }
-}
