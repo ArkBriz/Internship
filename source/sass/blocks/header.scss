@@ -25,6 +25,8 @@
 }
 
 .header__navigation {
+  display: none;
+  flex-direction: column;
   max-width: 290px;
   margin-left: auto;
   padding: 35px 25px;
