@@ -1,9 +1,19 @@
-.about__block:not(:last-child) {
+.about__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about__block {
   margin-bottom: 40px;
 
   @include media("desktop") {
     margin-bottom: 60px;
   }
+}
+
+.about__block:last-child {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .about__block p {
@@ -20,6 +30,8 @@
   }
 
   @include media("desktop") {
+    width: 702px;
+    margin-right: 40px;
     font-size: 22px;
     line-height: 32px;
   }
@@ -50,6 +62,7 @@
   margin-bottom: 30px;
 
   @include media("tablet") {
+    width: 490px;
     margin-bottom: 40px;
   }
 
@@ -59,12 +72,62 @@
 }
 
 .about__stats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
   margin: 0;
-  padding: 0;
+  padding: 40px 20px;
   list-style: none;
   color: $white;
   background-color: $blue;
   border-radius: 20px;
+
+  @include media("tablet") {
+    gap: 54px 52px;
+    padding: 72px 50px 50px 70px;;
+  }
+
+  @include media("desktop") {
+    padding: 72px 100px 50px 120px;
+  }
+}
+
+.about__stats-item {
+  width: 250px;
+  padding: 15px 20px;
+  border: 1px solid $beige;
+  border-radius: 16px;
+
+  @include media("tablet") {
+    width: 253px;
+  }
+
+  @include media("desktop") {
+    display: grid;
+    align-items: center;
+    width: 484px;
+    padding: 30px 40px;
+
+    &--programs {
+      grid-template-columns: 144px 175px;
+      column-gap: 57px;
+    }
+
+    &--participants {
+      grid-template-columns: 171px 158px;
+      column-gap: 30px;
+    }
+
+    &--countries {
+      grid-template-columns: 163px 192px;
+      column-gap: 39px;
+    }
+
+    &--grants {
+      grid-template-columns: 134px 190px;
+      column-gap: 67px;
+    }
+  }
 }
 
 .about__stats-item h4 {
@@ -73,7 +136,20 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  letter-spacing: 0.16px;
   text-transform: uppercase;
+
+  @include media("tablet") {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  @include media("desktop") {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+  }
 }
 
 .about__stats-item p {
