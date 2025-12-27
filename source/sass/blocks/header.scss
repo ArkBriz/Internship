@@ -1,12 +1,39 @@
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 4px;
+}
+
 .header__menu-button {
+  min-width: 136px;
+  padding-block: 20px;
   font-size: 14px;
+  padding-left: 20px;
   background-color: $white;
+  text-align: left;
+}
+
+.header__menu-button .button-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  width: 46px;
+  height: 46px;
+  margin: auto;
 }
 
 .header__navigation {
+  max-width: 290px;
+  margin-left: auto;
   padding: 35px 25px;
   background-color: $blue;
   border-radius: 16px;
+
+  @include media("tablet") {
+    max-width: 289px;
+  }
 }
 
 .header__navigation-list,
@@ -16,7 +43,16 @@
   list-style-type: none;
 }
 
+.header__navigation-item:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.header__subnavigation-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .header__navigation-toggle {
+  margin-bottom: 20px;
   padding: 0;
   font-size: 16px;
   line-height: 1;
@@ -27,6 +63,10 @@
   cursor: pointer;
   text-transform: uppercase;
   opacity: 0.7;
+
+  &--active {
+    opacity: 1;
+  }
 }
 
 .header__navigation-link,
