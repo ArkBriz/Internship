@@ -3,6 +3,16 @@
   color: $white;
   background-color: $blue;
   border-radius: 16px;
+
+  @include media("tablet") {
+    width: 442px;
+    padding: 41px 40px 36px;
+  }
+
+  @include media("desktop") {
+    width: 490px;
+    padding: 44px 70px 40px;
+  }
 }
 
 .feedback__title {
