@@ -1,13 +1,30 @@
+.contacts__wrapper {
+  @include media("desktop") {
+    display: flex;
+  }
+}
+
 .contacts__address {
   font-style: normal;
+
+  @include media("desktop") {
+    margin-left: auto;
+  }
 }
 
 .contacts__list {
   margin: 0;
   margin-bottom: 30px;
 
+  @include media("tablet") {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 24px 20.5px;
+  }
+
   @include media("desktop") {
     margin-bottom: 40px;
+    column-gap: 52.5px;
   }
 }
 
@@ -20,7 +37,8 @@
   opacity: 0.8;
 
   @include media("tablet") {
-    margin-bottom: 24px;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
   }
 }
 
@@ -32,8 +50,18 @@
     margin-bottom: 0;
   }
 
+  & br {
+    display: none;
+  }
+
   @include media("tablet") {
     margin-bottom: 0;
+  }
+
+  @include media("desktop") {
+    & br {
+      display: block;
+    }
   }
 }
 
