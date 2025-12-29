@@ -1,3 +1,27 @@
+.grant__wrapper {
+  display: grid;
+  gap: 30px;
+
+  @include media("tablet") {
+    gap: 40px;
+  }
+
+  @include media("desktop") {
+    grid-template-columns: repeat(2, 498px);
+    column-gap: 138px;
+  }
+}
+
+.grant__block p {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include media("tablet") {
+    width: 498px;
+    margin-bottom: 40px;
+  }
+}
+
 .grant__subtitle {
   margin: 0;
   margin-bottom: 25px;
@@ -19,7 +43,25 @@
 }
 
 .grant__steps-list {
+  display: grid;
+  gap: 15px;
   margin: 0;
-  padding: 0;
-  // list-style: none;
+  padding-left: 15px;
+  list-style-type: none;
+
+  @include media("tablet") {
+    grid-template-columns: repeat(2, 305px);
+    gap: 25px 48px;
+    padding-left: 20px;
+  }
+
+  @include media("desktop") {
+    grid-template-columns: auto;
+  }
+}
+
+.grant__steps-item {
+  padding: 25px;
+  border: 1px solid $beige;
+  border-radius: 16px;
 }
