@@ -77,6 +77,18 @@
   }
 }
 
+.reviews .section__title {
+  margin-bottom: 35px;
+
+  @include media("tablet") {
+    margin-bottom: 40px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 45px;
+  }
+}
+
 .contacts .section__title {
   margin-bottom: 35px;
 
