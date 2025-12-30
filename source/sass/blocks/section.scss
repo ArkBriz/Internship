@@ -1,6 +1,10 @@
 .section {
   padding-block: 50px;
 
+  @include media("desktop") {
+    padding-block: 60px;
+  }
+
   &--highlight {
     padding-block: 70px;
     color: $white;
@@ -13,10 +17,6 @@
     @include media("desktop") {
       padding-block: 120px;
     }
-  }
-
-  @include media("desktop") {
-    padding-block: 60px;
   }
 }
 
