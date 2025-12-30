@@ -1,21 +1,88 @@
 .hero__slide {
-  padding-top: 123px;
+  position: relative;
+  margin-top: -80px;
+  padding-top: 203px;
   padding-bottom: 20px;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+
+  &--bg-1 {
+    background-image:
+      image-set(
+        url("../../img/bg/hero-1@1x.webp") 1x,
+        url("../../img/bg/hero-1@2x.webp") 2x,
+        url("../../img/bg/hero-1@1x.jpg") 1x,
+        url("../../img/bg/hero-1@2x.jpg") 2x
+      );
+    background-position: calc(50% - 20px) 0;
+  }
+
+  &--bg-2 {
+    background-image:
+      image-set(
+        url("../../img/bg/hero-2@2x.webp") 2x,
+        url("../../img/bg/hero-2@1x.webp") 1x,
+        url("../../img/bg/hero-2@1x.jpg") 1x,
+        url("../../img/bg/hero-2@2x.jpg") 2x
+      );
+  }
+
+  &--bg-3 {
+    background-image:
+      image-set(
+        url("../../img/bg/hero-3@2x.webp") 2x,
+        url("../../img/bg/hero-3@1x.webp") 1x,
+        url("../../img/bg/hero-3@1x.jpg") 1x,
+        url("../../img/bg/hero-3@2x.jpg") 2x
+      );
+  }
+
   @include media("tablet") {
-    padding-top: 557px;
+    padding-top: 687px;
     padding-bottom: 60px;
+
+    &--bg-1 {
+      background-position: center 0;
+    }
+
+    &--bg-3 {
+      background-position: calc(50% - 120px) 0;
+      background-repeat: repeat-x;
+    }
   }
 
   @include media("desktop") {
-    padding-top: 303px;
+    padding-top: 433px;
+
+    &--bg-1 {
+      background-position: center -65px;
+    }
+
+    &--bg-3 {
+      background-position: center -65px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light-blue;
+    z-index: 1;
   }
 }
 
 .hero__slide-content {
+  position: relative;
   padding: 10px 14px;
   background-color: $white;
   border-radius: 12px;
+  z-index: 2;
 
   @include media("tablet") {
     display: flex;
@@ -42,6 +109,12 @@
     margin-block: 30px 24px;
     font-size: 36px;
     line-height: 44px;
+
+    &--first {
+      br {
+        display: none;
+      }
+    }
   }
 
   @include media("desktop") {
