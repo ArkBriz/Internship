@@ -18,28 +18,118 @@
 }
 
 .programs__slide {
+  position: relative;
   display: grid;
   align-items: end;
   max-width: 290px;
-  min-height: 290px;
+  min-height: 400px;
   padding: 18px 10px;
   background-color: $white;
+  background-repeat: no-repeat;
   border-radius: 12px;
+
+  &--bg-1 {
+    background-image:
+      image-set(
+        url("../../img/bg/programs-1@1x.webp") 1x,
+        url("../../img/bg/programs-1@2x.webp") 2x,
+        url("../../img/bg/programs-1@1x.jpg") 1x,
+        url("../../img/bg/programs-1@2x.jpg") 2x
+      );
+    background-size: 480px;
+    background-position: -40px -320px;
+  }
+
+  &--bg-2 {
+    background-image:
+      image-set(
+        url("../../img/bg/programs-2@1x.webp") 1x,
+        url("../../img/bg/programs-2@2x.webp") 2x,
+        url("../../img/bg/programs-2@1x.jpg") 1x,
+        url("../../img/bg/programs-2@2x.jpg") 2x
+      );
+    background-size: cover;
+    background-position: -165px 0;
+  }
+
+  &--bg-3 {
+    background-image:
+      image-set(
+        url("../../img/bg/programs-3@1x.webp") 1x,
+        url("../../img/bg/programs-3@2x.webp") 2x,
+        url("../../img/bg/programs-3@1x.jpg") 1x,
+        url("../../img/bg/programs-3@2x.jpg") 2x
+      );
+    background-size: 400px;
+    background-position: -90px -188px;
+  }
 
   @include media("tablet") {
     max-width: 324px;
+    min-height: 420px;
+    padding: 10px 20px;
+
+    &--bg-1 {
+      background-size: 494px;
+    }
+
+    &--bg-3 {
+      background-size: 390px;
+      background-position: -68px -148px;
+    }
   }
 
   @include media("desktop") {
     max-width: 392px;
+    padding: 17px 20px;
+
+    &--bg-1 {
+      background-size: 526px;
+      background-position: -18px -355px;
+    }
+
+    &--bg-2 {
+      background-position: -128px 0;
+    }
+
+    &--bg-3 {
+      background-size: 440px;
+      background-position: -21px -219px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $light-blue;
+    border-radius: 12px;
+    z-index: 1;
   }
 }
 
 .programs__slide-content {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 30px;
   column-gap: 16px;
+  min-height: 111px;
   padding: 18px 18px 15px;
+  background-color: $white;
+  border-radius: 12px;
+  z-index: 2;
+
+  @include media("tablet") {
+    width: 263px;
+    min-height: 125px;
+  }
+
+  @include media("desktop") {
+    width: 321px;
+  }
 }
 
 .programs__slide-title {
