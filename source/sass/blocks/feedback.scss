@@ -1,3 +1,49 @@
+.feedback {
+  padding-top: 43px;
+  padding-bottom: 40px;
+
+  background-image:
+    image-set(
+      url("../../img/bg/big-city-tablet@1x.webp") 1x,
+      url("../../img/bg/big-city-tablet@2x.webp") 2x,
+      url("../../img/bg/big-city-tablet@1x.jpg") 1x,
+      url("../../img/bg/big-city-tablet@2x.jpg") 2x
+    );
+  background-size: 625px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  @include media("tablet") {
+    padding-block: 50px;
+    background-image: none;
+  }
+}
+
+.feedback__container {
+  @include media("tablet") {
+    background-image:
+      image-set(
+        url("../../img/bg/big-city-tablet@1x.webp") 1x,
+        url("../../img/bg/big-city-tablet@2x.webp") 2x,
+        url("../../img/bg/big-city-tablet@1x.jpg") 1x,
+        url("../../img/bg/big-city-tablet@2x.jpg") 2x
+      );
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+
+  @include media("desktop") {
+    background-image:
+      image-set(
+        url("../../img/bg/big-city-desktop@1x.webp") 1x,
+        url("../../img/bg/big-city-desktop@2x.webp") 2x,
+        url("../../img/bg/big-city-desktop@1x.jpg") 1x,
+        url("../../img/bg/big-city-desktop@2x.jpg") 2x
+      );
+  }
+}
+
 .feedback__inner {
   padding: 15px 15px 27px;
   color: $white;
