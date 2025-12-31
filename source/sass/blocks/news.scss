@@ -62,16 +62,89 @@
   max-width: 290px;
   min-height: 330px;
   background-color: $beige;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+
+  &--bg-1 {
+    background-image:
+      image-set(
+        url("../../img/bg/news-1@1x.webp") 1x,
+        url("../../img/bg/news-1@2x.webp") 2x,
+        url("../../img/bg/news-1@1x.jpg") 1x,
+        url("../../img/bg/news-1@2x.jpg") 2x
+      );
+    background-position: -7px 0;
+  }
+
+  &--bg-2 {
+    min-height: 240px;
+    background-image:
+      image-set(
+        url("../../img/bg/news-2@1x.webp") 1x,
+        url("../../img/bg/news-2@2x.webp") 2x,
+        url("../../img/bg/news-2@1x.jpg") 1x,
+        url("../../img/bg/news-2@2x.jpg") 2x
+      );
+    background-position: 0 -35px;
+  }
+
+  &--bg-3 {
+    background-image:
+      image-set(
+        url("../../img/bg/news-3@1x.webp") 1x,
+        url("../../img/bg/news-3@2x.webp") 2x,
+        url("../../img/bg/news-3@1x.jpg") 1x,
+        url("../../img/bg/news-3@2x.jpg") 2x
+      );
+    background-position: 0 -45px;
+  }
+
+  &--bg-4 {
+    background-image:
+      image-set(
+        url("../../img/bg/news-4@1x.webp") 1x,
+        url("../../img/bg/news-4@2x.webp") 2x,
+        url("../../img/bg/news-4@1x.jpg") 1x,
+        url("../../img/bg/news-4@2x.jpg") 2x
+      );
+  }
 
   @include media("tablet") {
     max-width: 324px;
+    min-height: 350px;
+
+    &--bg-2 {
+      background-position: 0 0;
+    }
+
+    &--bg-3 {
+      background-position: 0 -69px;
+    }
   }
 
   @include media("desktop") {
     max-width: 286px;
+    min-height: 400px;
 
     &--first {
       max-width: 604px;
+    }
+
+    &--bg-1 {
+      background-position: 0 -126px;
+    }
+
+    &--bg-2 {
+      background-position: -44px 0;
+    }
+
+    &--bg-3 {
+      background-position: 0 -13px;
+    }
+
+    &--bg-4 {
+      background-position: -43px 0;
     }
   }
 }
@@ -79,9 +152,12 @@
 .news__slide-content {
   width: 263px;
   padding: 12px 10px 10px 0;
+  background-color: $beige;
+  border-top-right-radius: 12px;
 
   @include media("tablet") {
     width: 240px;
+    padding: 12px 18px 15px 0;
   }
 }
 
