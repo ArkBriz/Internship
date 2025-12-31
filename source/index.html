@@ -469,7 +469,12 @@
           </div>
 
           <div class="contacts__map">
-            <img src="img/map-stub.jpg" width="290" height="240" alt="Карта с расположением центрального офиса по адресу: г. Новосибирск, ул. Щетинкина 68">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x" type="image/webp" width="1240" height="486">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x" type="image/webp" width="678" height="500">
+              <source srcset="img/map/map-mobile@1x.webp 1x, img/map/map-mobile@2x.webp 2x" type="image/webp" width="290" height="240">
+              <img src="img/map/map-mobile@1x.jpg" srcset="img/map/map-mobile@1x.jpg 1x, img/map/map-mobile@2x.jpg 2x" alt="Карта с расположением центрального офиса по адресу: г. Новосибирск, ул. Щетинкина 68" loading="lazy">
+            </picture>
           </div>
       </section>
 
