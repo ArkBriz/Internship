@@ -14,7 +14,7 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-coloe 0.3s, color 0.3s;
 
   @include media("tablet") {
     font-size: 14px;
@@ -29,7 +29,15 @@
   &:focus {
     color: $blue;
     background-color: $white;
-    outline: 2px solid $blue
+    outline: 2px solid $blue;
+    outline-offset: -2px;
+  }
+
+  &--dark:focus {
+    color: $white;
+    background-color: $blue;
+    outline: 2px solid $white;
+    outline-offset: -2px;
   }
 
   &:hover {
@@ -37,9 +45,29 @@
     background-color: $blue;
   }
 
+  &--dark:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
   &:active {
     color: rgba($white, 0.7);
     background-color: $blue;
     outline: none;
+  }
+
+  &--dark:active {
+    color: rgba($blue, 0.7);
+    background-color: $white;
+    outline: none;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &.disabled {
+    background-color: transparent;
+    color: $grey;
+    border-color: $grey;
+    cursor: not-allowed;
   }
 }
