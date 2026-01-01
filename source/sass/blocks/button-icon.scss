@@ -1,9 +1,11 @@
 .button-icon {
+  position: relative;
   display: inline-block;
   width: 34px;
   height: 34px;
   background-color: $blue;
   border-radius: 50%;
+  transition: all 0.3s ease;
 
   &--light {
     background-color: $white;
@@ -21,4 +23,34 @@
     width: 46px;
     height: 46px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    transition: all 0.3s ease;
+
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+}
+
+.button:focus .button-icon {
+  background-color: $blue;
+}
+
+.button:hover .button-icon {
+  background-color: $white;
+}
+
+.button:active .button-icon {
+  background-color: $white;
 }

@@ -18,16 +18,108 @@
   padding-left: 20px;
   background-color: $white;
   text-align: left;
+
+  &--open {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
-.header__menu-button .button-icon {
+.header__button-icon {
   position: absolute;
+  display: inline-block;
   top: 0;
   bottom: 0;
   right: 5px;
+  margin: auto;
+  width: 34px;
+  height: 34px;
+  background-color: $blue;
+  border-radius: 50%;
+  transition: all 0.3s ease;
   width: 46px;
   height: 46px;
-  margin: auto;
+
+  &--open {
+    background-color: $white;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 15px;
+    height: 1px;
+    background-color: $white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &::after {
+    top: 23px;
+    box-shadow: 0 3px 0 $white,
+  }
+
+  &--open::before,
+  &--open::after {
+    width: 23px;
+    top: 22px;
+    background-color: $blue;
+  }
+
+  &--open::before {
+    transform: rotate(45deg);
+  }
+
+  &--open::after {
+    box-shadow: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.header__menu-button:focus .header__button-icon {
+  background-color: $blue;
+}
+
+.header__menu-button:hover .header__button-icon {
+  background-color: $white;
+}
+
+.header__menu-button:active .header__button-icon {
+  background-color: $white;
+}
+
+.header__menu-button:focus .header__button-icon::before,
+.header__menu-button:focus .header__button-icon::after {
+  background-color: $white;
+}
+
+.header__menu-button:focus .header__button-icon::after {
+  background-color: $white;
+  box-shadow: 0 3px 0 $white;
+}
+
+.header__menu-button:hover .header__button-icon::before,
+.header__menu-button:hover .header__button-icon::after {
+  background-color: $blue;
+}
+
+.header__menu-button:hover .header__button-icon::after {
+  background-color: $blue;
+  box-shadow: 0 3px 0 $blue;
+}
+
+.header__menu-button:active .header__button-icon::before,
+.header__menu-button:active .header__button-icon::after {
+  background-color: rgba($blue, 0.7);
+}
+
+.header__menu-button:active .header__button-icon::after {
+  background-color: rgba($blue, 0.7);
+  box-shadow: 0 3px 0 rgba($blue, 0.7);
 }
 
 .header__navigation {
