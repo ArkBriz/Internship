@@ -75,6 +75,7 @@
   margin: 0;
   padding-left: 15px;
   list-style-type: none;
+  counter-reset: item 0;
 
   @include media("tablet") {
     grid-template-columns: repeat(2, 305px);
@@ -88,7 +89,36 @@
 }
 
 .grant__steps-item {
+  position: relative;
   padding: 25px;
   border: 1px solid $beige;
   border-radius: 16px;
+  counter-increment: item 1;
+
+  &::before {
+    content: counter(item);
+    position: absolute;
+    top: -3px;
+    left: -14px;
+    width: 28px;
+    height: 32px;
+    padding-top: 6px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    text-align: center;
+    background-color: $blue;
+  }
+
+  @include media("tablet") {
+
+    &::before {
+      top: -14px;
+      left: -21px;
+      width: 42px;
+      height: 42px;
+      padding-top: 10px;
+      font-size: 22px;
+    }
+  }
 }
