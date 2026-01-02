@@ -47,72 +47,74 @@
   }
 }
 
-.button:focus .button-icon,
-.button-icon:focus {
-  background-color: $blue;
-  outline: none;
+@media (hover: hover) {
+  .button:focus .button-icon,
+  .button-icon:focus {
+    background-color: $blue;
+    outline: none;
+
+      &::before {
+      background-color: $white;
+      transform: rotate(45deg);
+    }
+  }
+
+  .button:focus .button-icon--light {
+    background-color: $white;
 
     &::before {
+      background-color: $blue;
+    }
+  }
+
+  .button:hover .button-icon,
+  .button-icon:hover {
     background-color: $white;
-    transform: rotate(45deg);
+
+    &::before {
+      background-color: $blue;
+      transform: rotate(45deg);
+    }
   }
-}
 
-.button:focus .button-icon--light {
-  background-color: $white;
-
-  &::before {
+  .button:hover .button-icon--light {
     background-color: $blue;
+
+    &::before {
+      background-color: $white;
+    }
   }
-}
 
-.button:hover .button-icon,
-.button-icon:hover {
-  background-color: $white;
-
-  &::before {
-    background-color: $blue;
-    transform: rotate(45deg);
-  }
-}
-
-.button:hover .button-icon--light {
-  background-color: $blue;
-
-  &::before {
+  .button:active .button-icon,
+  .button-icon:active {
     background-color: $white;
+
+    &::before {
+      background-color: rgba($blue, 0.7);
+      transform: rotate(45deg);
+    }
   }
-}
 
-.button:active .button-icon,
-.button-icon:active {
-  background-color: $white;
+  .button:active .button-icon--light {
+    background-color: $blue;
 
-  &::before {
-    background-color: rgba($blue, 0.7);
-    transform: rotate(45deg);
+    &::before {
+      background-color: rgba($white, 0.7);
+    }
   }
-}
 
-.button:active .button-icon--light {
-  background-color: $blue;
+  .button:disabled .button-icon,
+  .button:disabled:hover .button-icon,
+  .button.disabled .button-icon,
+  .button-icon:disabled,
+  .button-icon:hover:disabled,
+  .button-icon.disabled {
+    background-color: $grey;
+    cursor: not-allowed;
 
-  &::before {
-    background-color: rgba($white, 0.7);
-  }
-}
-
-.button:disabled .button-icon,
-.button:disabled:hover .button-icon,
-.button.disabled .button-icon,
-.button-icon:disabled,
-.button-icon:hover:disabled,
-.button-icon.disabled {
-  background-color: $grey;
-  cursor: not-allowed;
-
-  &::before {
-    background-color: rgba($white, 0.6);
-    transform: none;
+    &::before {
+      background-color: rgba($white, 0.6);
+      transform: none;
+    }
   }
 }

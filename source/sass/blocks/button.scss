@@ -26,48 +26,50 @@
     border-color: $white;
   }
 
-  &:focus {
-    color: $blue;
-    background-color: $white;
-    outline: 2px solid $blue;
-    outline-offset: -2px;
-  }
+  @media (hover: hover) {
+    &:focus {
+      color: $blue;
+      background-color: $white;
+      outline: 2px solid $blue;
+      outline-offset: -2px;
+    }
 
-  &--dark:focus {
-    color: $white;
-    background-color: $blue;
-    outline: 2px solid $white;
-    outline-offset: -2px;
-  }
+    &--dark:focus {
+      color: $white;
+      background-color: $blue;
+      outline: 2px solid $white;
+      outline-offset: -2px;
+    }
 
-  &:hover {
-    color: $white;
-    background-color: $blue;
-  }
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
 
-  &--dark:hover {
-    color: $blue;
-    background-color: $white;
-  }
+    &--dark:hover {
+      color: $blue;
+      background-color: $white;
+    }
 
-  &:active {
-    color: rgba($white, 0.7);
-    background-color: $blue;
-    outline: none;
-  }
+    &:active {
+      color: rgba($white, 0.7);
+      background-color: $blue;
+      outline: none;
+    }
 
-  &--dark:active {
-    color: rgba($blue, 0.7);
-    background-color: $white;
-    outline: none;
-  }
+    &--dark:active {
+      color: rgba($blue, 0.7);
+      background-color: $white;
+      outline: none;
+    }
 
-  &:disabled,
-  &:disabled:hover,
-  &.disabled {
-    background-color: transparent;
-    color: $grey;
-    border-color: $grey;
-    cursor: not-allowed;
+    &:disabled,
+    &:disabled:hover,
+    &.disabled {
+      background-color: transparent;
+      color: $grey;
+      border-color: $grey;
+      cursor: not-allowed;
+    }
   }
 }

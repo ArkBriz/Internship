@@ -14,6 +14,7 @@
 }
 
 .faq__question {
+  position: relative;
   width: 100%;
   padding: 25px 84px 25px 18px;
   font-size: 16px;
@@ -25,7 +26,14 @@
   border: 2px solid $blue;
   border-radius: 14px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  &--open {
+    color: $white;
+    background-color: $blue;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
   @include media("tablet") {
     padding: 40px 82px 40px 32px;
@@ -38,19 +46,171 @@
     font-size: 28px;
     line-height: 34px;
   }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: $white;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $white;
+      color: $dark-blue;
+    }
+
+    &--open:hover,
+    &--open:focus {
+      background-color: $blue;
+      outline: none;
+    }
+
+    &--open:active {
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+      color: $white;
+    }
+  }
 }
 
 .faq__question + p {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  // padding: 0 17px 22px;
+  color: $white;
+  background-color: $blue;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+  @include media("tablet") {
+    // padding: 0 32px 32px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+.faq__question--open + p {
+  height: auto;
   margin: 0;
   padding: 0 17px 22px;
   color: $white;
   background-color: $blue;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
+  transition: background-color 0.3s ease;
 
   @include media("tablet") {
     padding: 0 32px 32px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+  }
+}
+
+.faq__icon {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 17px;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background-color: $blue;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &::before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: $white;
+    transition: all 0.3 ease;
+  }
+
+  &::before {
+    width: 18px;
+    height: 1px;
+  }
+
+  &::after {
+    width: 1px;
+    height: 18px;
+  }
+
+  @include media("tablet") {
+    right: 32px;
+  }
+
+  @include media("desktop") {
+    right: 42px;
+  }
+}
+
+.faq__question--open .faq__icon {
+  background-color: $white;
+
+  &::before {
+    background-color: $blue;
+  }
+
+  &::after {
+    background-color: $blue;
+    transform: rotate(90deg);
+  }
+}
+
+@media (hover: hover) {
+  .faq__question:hover .faq__icon,
+  .faq__question:focus .faq__icon {
+    background-color: $white;
+    border: 1px solid $blue;
+
+    &::before,
+    &::after {
+      background-color: $blue;
+    }
+  }
+
+  .faq__question:active .faq__icon {
+    background-color: $dark-blue;
+    border: none;
+
+    &::before,
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  .faq__question--open:hover .faq__icon,
+  .faq__question--open:focus .faq__icon {
+    background-color: $blue;
+    border: 1px solid $white;
+
+    &::before,
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  .faq__question--open:active .faq__icon {
+    background-color: $white;
+    border: none;
+
+    &::before,
+    &::after {
+      background-color: $dark-blue;
+    }
+  }
+
+  .faq__question--open:active + p {
+    background-color: $dark-blue;
   }
 }
