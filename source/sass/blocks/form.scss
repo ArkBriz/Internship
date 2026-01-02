@@ -40,11 +40,73 @@ textarea {
   resize: none;
 }
 
+.form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__checkbox-mark {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.form__checkbox-input:checked + .form__checkbox-mark {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: $blue;
+    mask-image: url("/__spritemap#sprite-check-view");
+  }
+}
+
+.form__checkbox-label:hover .form__checkbox-mark,
+.form__checkbox-input:focus + .form__checkbox-mark {
+  background-color: $blue;
+  border: 1px solid $white;
+  cursor: pointer;
+
+  &::before {
+    background-color: $white;
+  }
+}
+
+.form__checkbox-input:disabled + .form__checkbox-mark {
+  background-color: $grey;
+  border: 1px solid $white;
+  cursor: not-allowed;
+}
+
+.form__checkbox-input:checked:disabled + .form__checkbox-mark {
+  background-color: $grey;
+  border: none;
+  cursor: not-allowed;
+
+  &::before {
+    background-color: $white;
+  }
+}
+
 .form__checkbox-text {
+  width: 155px;
   font-size: 12px;
   line-height: 14px;
 
   @include media("tablet") {
+    width: 100%;
     font-size: 12px;
     line-height: 12px;
   }
