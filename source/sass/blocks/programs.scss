@@ -121,14 +121,20 @@
   background-color: $white;
   border-radius: 12px;
   z-index: 2;
+  --nb-r: 16px;
+  --nb-h: 5px;
+  --nb-w: 95px;
 
   @include media("tablet") {
     width: 263px;
     min-height: 125px;
+    --nb-w: 55px;
   }
 
   @include media("desktop") {
     width: 321px;
+    --nb-h: 10px;
+    --nb-w: 95px;
   }
 }
 
