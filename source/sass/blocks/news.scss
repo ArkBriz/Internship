@@ -168,7 +168,7 @@
   }
 }
 
-.hero__slide-content-inner {
+.news__slide-content-inner {
   width: 200px;
   padding-top: 12px;
   padding-right: 10px;
@@ -179,7 +179,7 @@
   --nb-h: 2px;
 }
 
-.news__slide--first .hero__slide-content-inner {
+.news__slide--first .news__slide-content-inner {
   @include media("desktop") {
     width: 428px;
     --nb-w: 315px;
