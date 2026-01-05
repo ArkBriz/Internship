@@ -72,6 +72,18 @@
   @include media("desktop") {
     line-height: 17px;
   }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .footer__policy-link {
@@ -80,6 +92,7 @@
   line-height: 14px;
   color: inherit;
   text-underline-position: under;
+  transition: opacity 0.3s;
 
   @include media("tablet") {
     grid-column: 1 / 3;
@@ -94,6 +107,18 @@
     justify-self: end;
     font-size: 14px;
     line-height: 18px;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
