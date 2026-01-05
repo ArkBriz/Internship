@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 2px;
     margin: 0;
+    margin-bottom: 40px;
     padding: 0;
     overflow: visible;
   }
@@ -150,14 +151,38 @@
 }
 
 .news__slide-content {
+  position: relative;
   width: 263px;
-  padding: 12px 10px 10px 0;
-  background-color: $beige;
-  border-top-right-radius: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -15px;
+    background-image: url("/__spritemap#sprite-angle-view");
+  }
 
   @include media("tablet") {
     width: 240px;
-    padding: 12px 18px 15px 0;
+  }
+}
+
+.hero__slide-content-inner {
+  width: 200px;
+  padding-top: 12px;
+  padding-right: 10px;
+  background-color: $beige;
+  border-top-right-radius: 12px;
+  --nb-r: 15px;
+  --nb-w: 92px;
+  --nb-h: 2px;
+}
+
+.news__slide--first .hero__slide-content-inner {
+  @include media("desktop") {
+    width: 428px;
+    --nb-w: 315px;
   }
 }
 
@@ -174,8 +199,9 @@
 }
 
 .news__slide-title {
+  width: 220px;
   margin: 0;
-  margin-block: 15px;
+  margin-top: 15px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -200,15 +226,53 @@
 }
 
 .news__slide-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 30px;
   gap: 10px;
+  margin-top: -1px;
+  padding-top: 16px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: $beige;
+  border-top-right-radius: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 48px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/__spritemap#sprite-angle-view");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/__spritemap#sprite-angle-view");
+  }
 
   @include media("tablet") {
     gap: 16px;
+    padding-bottom: 15px;
 
     & br {
       display: none;
+    }
+
+    &::before {
+      right: 25px;
+    }
+  }
+
+  @include media("desktop") {
+    &::after {
+      right: -15px;
     }
   }
 }
