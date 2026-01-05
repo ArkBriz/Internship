@@ -1,4 +1,5 @@
 .modal__body {
+  position: relative;
   width: 290px;
   margin: 0 auto;
   padding: 40px 15px;
@@ -8,6 +9,66 @@
   @include media("tablet") {
     width: 510px;
     padding: 60px 80px;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  right: 6px;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    background-color: $blue;
+    mask-image: url("/__spritemap#sprite-cross-view");
+    transition: background-color 0.3s ease;
+  }
+
+  @include media("tablet") {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: $blue;
+      outline: none;
+
+      &::before {
+        background-color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $dark-blue;
+
+      &::before {
+        background-color: rgba($white, 0.5);
+      }
+    }
   }
 }
 
@@ -47,6 +108,27 @@
   margin-bottom: 8px;
   font-size: 14px;
   line-height: 1;
+}
+
+.modal .form__checkbox-mark {
+  background-color: $blue;
+}
+
+.form__checkbox-input--modal:checked + .form__checkbox-mark {
+  &::before {
+    background-color: $white;
+  }
+}
+
+.form__checkbox-label--modal:hover .form__checkbox-mark,
+.form__checkbox-input--modal:focus + .form__checkbox-mark {
+  background-color: $white;
+  border: 1px solid $blue;
+  cursor: pointer;
+
+  &::before {
+    background-color: $blue;
+  }
 }
 
 .modal .form__input {
