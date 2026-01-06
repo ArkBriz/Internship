@@ -26,7 +26,10 @@
   border: 2px solid $blue;
   border-radius: 14px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-radius 0.2s ease;
 
   &--open {
     color: $white;
@@ -39,6 +42,12 @@
     padding: 40px 82px 40px 32px;
     font-size: 22px;
     line-height: 26px;
+    border-radius: 16px;
+
+    &--open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 
   @include media("desktop") {
@@ -74,33 +83,33 @@
 }
 
 .faq__question + p {
-  height: 0;
+  max-height: 0;
   margin: 0;
-  padding: 0;
-  // padding: 0 17px 22px;
+  padding: 0 17px 0;
   color: $white;
   background-color: $blue;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   overflow: hidden;
-  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  transition:
+    max-height 0.2s ease,
+    padding 0.2s ease;
 
   @include media("tablet") {
-    // padding: 0 32px 32px;
+    padding: 0 32px 0;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
   }
 }
 
 .faq__question--open + p {
-  height: auto;
+  max-height: 500px;
   margin: 0;
   padding: 0 17px 22px;
   color: $white;
   background-color: $blue;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
-  transition: background-color 0.3s ease;
 
   @include media("tablet") {
     padding: 0 32px 32px;
@@ -120,7 +129,7 @@
   height: 40px;
   background-color: $blue;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &::before,
   &:after {
@@ -132,7 +141,7 @@
     left: 0;
     margin: auto;
     background-color: $white;
-    transition: all 0.3 ease;
+    transition: background-color 0.3 ease;
   }
 
   &::before {
@@ -143,6 +152,7 @@
   &::after {
     width: 1px;
     height: 18px;
+    transition: transform 0.3s ease;
   }
 
   @include media("tablet") {
