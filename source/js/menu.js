@@ -45,14 +45,14 @@ const updateTabIndex = () => {
 };
 
 const toggleMenu = () => {
-  const isOpen = menu.classList.contains('header__navigation--closed');
+  const isClosed = menu.classList.contains('header__navigation--closed');
 
   menu.classList.toggle('header__navigation--closed');
   menuToggler.classList.toggle('header__menu-button--open');
   body.classList.toggle('page-body--menu-open');
 
-  menuToggler.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  menuToggler.setAttribute('aria-expanded', isClosed ? 'true' : 'false');
+  menu.setAttribute('aria-hidden', isClosed ? 'false' : 'true');
 
   updateTabIndex();
 };
@@ -89,7 +89,7 @@ menuLinks.forEach((link) => {
   });
 
   link.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Enter' || evt.target === ' ') {
+    if (evt.key === 'Enter') {
       closeMenu();
     }
   });
