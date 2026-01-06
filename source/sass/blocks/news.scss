@@ -199,13 +199,13 @@
 }
 
 .news__slide-title {
+  display: block;
   width: 220px;
   margin: 0;
   margin-top: 15px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: $blue;
 
   @include media("tablet") {
     width: 200px;
@@ -217,6 +217,12 @@
     font-size: 24px;
     line-height: 26px;
   }
+}
+
+.news__slide-title-link {
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .news__slide--first .news__slide-title {
@@ -297,4 +303,50 @@
   align-self: center;
   width: 30px;
   height: 30px;
+}
+
+@media (hover: hover) {
+  .news__slide-content:hover,
+  .news__slide-content:focus {
+    .news__slide-title-link {
+      color: rgba($blue, 0.7);
+      text-decoration: underline;
+    }
+
+    .news__slide-link {
+      background-color: $white;
+
+      &::before {
+        background-color: $blue;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .news__slide-content:active {
+    .news__slide-title-link {
+      color: rgba($blue, 0.3);
+    }
+
+    .news__slide-link {
+      &::before {
+        background-color: rgba($blue, 0.5);
+      }
+    }
+  }
+
+  .news__slide-title-link:hover,
+  .news__slide-title-link:focus {
+    color: rgba($blue, 0.7);
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .news__slide-link:focus {
+    background-color: $white;
+
+    &::before {
+      background-color: $blue;
+    }
+  }
 }
