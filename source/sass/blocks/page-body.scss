@@ -1,8 +1,7 @@
 .page-body {
   position: relative;
 
-  &--menu-open,
-  &--form-open {
+  &--menu-open {
     &::before {
       content: "";
       position: fixed;
@@ -12,16 +11,10 @@
       right: 0;
       background-color: $light-black;
       z-index: 20;
-      animation: fadeIn 0.3s ease;
     }
   }
 
-  &--form-open {
+  &--modal-open {
     overflow: hidden;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
   }
 }
