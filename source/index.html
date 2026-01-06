@@ -27,25 +27,26 @@
           </button>
         </div>
 
-        <nav class="header__navigation" id="site-navigation" aria-label="Основная навигация" aria-hidden="true">
+        <nav class="header__navigation header__navigation--closed" id="site-navigation" aria-label="Основная навигация" aria-hidden="true">
           <ul class="header__navigation-list">
             <li class="header__navigation-item">
               <a class="header__navigation-link" href="#about">О проекте</a>
             </li>
             <li class="header__navigation-item">
-              <button class="header__navigation-toggle header__navigation-toggle--active" type="button" aria-expanded="false" aria-controls="programs-submenu">Программы</button>
+              <button class="header__navigation-toggle" type="button" aria-expanded="false" aria-controls="programs-submenu">Программы</button>
+
               <ul class="header__subnavigation-list" id="programs-submenu">
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Стажировки</a>
+                  <a class="header__subnavigation-link" href="#internships">Стажировки</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Волонтерство</a>
+                  <a class="header__subnavigation-link" href="#volunteering">Волонтерство</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Учеба</a>
+                  <a class="header__subnavigation-link" href="#learning">Учеба</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Религия</a>
+                  <a class="header__subnavigation-link" href="#religion">Религия</a>
                 </li>
               </ul>
             </li>
@@ -57,21 +58,23 @@
             </li>
             <li class="header__navigation-item">
               <button class="header__navigation-toggle" type="button" aria-expanded="false" aria-controls="news-submenu">Новости</button>
+
               <ul class="header__subnavigation-list" id="news-submenu">
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Интервью с участницей программы стажировки</a>
+                  <a class="header__subnavigation-link" href="#interview">Интервью с участницей программы стажировки</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Путешествуем по миру</a>
+                  <a class="header__subnavigation-link" href="#travelling">Путешествуем по миру</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Новая программа волонтёрства</a>
+                  <a class="header__subnavigation-link" href="#newprogram">Новая программа волонтёрства</a>
                 </li>
                 <li class="header__subnavigation-item">
-                  <a class="header__subnavigation-link" href="#">Построй свою карьеру</a>
+                  <a class="header__subnavigation-link" href="#career">Построй свою карьеру</a>
                 </li>
               </ul>
             </li>
+
             <li class="header__navigation-item">
               <a class="header__navigation-link" href="#contacts">Контакты</a>
             </li>
@@ -195,7 +198,7 @@
             </a>
             <div class="programs__slider swiper">
                <div class="swiper-wrapper" id="programs-slider">
-                <div class="programs__slide programs__slide--bg-1 swiper-slide">
+                <div class="programs__slide programs__slide--bg-1 swiper-slide" id="internships">
                   <div class="programs__slide-content nebo nebo--tr">
                     <h3 class="programs__slide-title">Стажировки</h3>
                     <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
@@ -204,7 +207,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="programs__slide programs__slide--bg-2 swiper-slide">
+                <div class="programs__slide programs__slide--bg-2 swiper-slide" id="volunteering">
                   <div class="programs__slide-content nebo nebo--tr">
                     <h3 class="programs__slide-title">Волонтёрство</h3>
                     <p>Помогайте другим и развивайте свои лидерские качества.</p>
@@ -213,7 +216,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="programs__slide programs__slide--bg-3 swiper-slide">
+                <div class="programs__slide programs__slide--bg-3 swiper-slide" id="learning">
                   <div class="programs__slide-content nebo nebo--tr">
                     <h3 class="programs__slide-title">Учёба</h3>
                     <p>Получите образование и измените своё будущее.</p>
@@ -285,7 +288,7 @@
 
           <div class="news__slider swiper">
             <div class="swiper-wrapper" id="news-list">
-              <div class="news__slide swiper-slide news__slide--bg-1 news__slide--first">
+              <div class="news__slide swiper-slide news__slide--bg-1 news__slide--first" id="interview">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-23">23/03/2023</time>
@@ -301,7 +304,7 @@
                   </div>
                 </div>
               </div>
-              <div class="news__slide news__slide--bg-2 swiper-slide">
+              <div class="news__slide news__slide--bg-2 swiper-slide" id="travelling">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-20">20/03/2023</time>
@@ -317,7 +320,7 @@
                   </div>
                 </div>
               </div>
-              <div class="news__slide news__slide--bg-3 swiper-slide">
+              <div class="news__slide news__slide--bg-3 swiper-slide" id="newprogram">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-17">17/03/2023</time>
@@ -333,7 +336,7 @@
                   </div>
                 </div>
               </div>
-              <div class="news__slide news__slide--bg-4 swiper-slide">
+              <div class="news__slide news__slide--bg-4 swiper-slide" id="career">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-10">10/03/2023</time>
@@ -645,7 +648,6 @@
 
     <!-- В открытом состоянии добавить атрибуты  role="dialog" aria-modal="true" aria-labelledby="modal-title" -->
     <div class="modal" aria-hidden="true">
-      <div class="modal__overlay"></div>
       <div class="modal__body">
         <button class="modal__close-button" type="button" aria-label="Закрыть окно"></button>
         <div class="modal__content">
@@ -707,23 +709,7 @@
       </div>
     </div>
 
-    <!-- пример использования спрайта -->
-    <!-- <img src="/__spritemap#sprite-logo-view" width="410" height="400" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <!-- <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script> -->
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

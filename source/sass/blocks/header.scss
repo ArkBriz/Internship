@@ -1,10 +1,11 @@
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 30;
   background-color: transparent;
 }
 
 .header__inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,16 +13,40 @@
 }
 
 .header__menu-button {
+  position: absolute;
+  right: 0;
   min-width: 136px;
   padding-block: 20px;
   font-size: 14px;
   padding-left: 20px;
   background-color: $white;
   text-align: left;
+  transition: min-width 0.3s ease-in-out, background-color 0.3s, color 0.3s;
 
   &--open {
+    min-width: 290px;
     background-color: $blue;
     color: $white;
+
+    @include media("tablet") {
+      min-width: 286px;
+      right: 0;
+    }
+
+    &:focus {
+      background-color: $blue;
+      color: $white;
+      outline: 2px solid $white;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+
+    &:active {
+      color: rgba($blue, 0.6);
+    }
   }
 }
 
@@ -39,10 +64,6 @@
   transition: all 0.3s ease;
   width: 46px;
   height: 46px;
-
-  &--open {
-    background-color: $white;
-  }
 
   &::before,
   &::after {
@@ -62,21 +83,27 @@
     top: 23px;
     box-shadow: 0 3px 0 $white,
   }
+}
 
-  &--open::before,
-  &--open::after {
-    width: 23px;
-    top: 22px;
-    background-color: $blue;
-  }
+.header__menu-button--open {
+  .header__button-icon {
+    background-color: $white;
 
-  &--open::before {
-    transform: rotate(45deg);
-  }
+    &::before,
+    &::after {
+      width: 23px;
+      top: 22px;
+      background-color: $blue;
+    }
 
-  &--open::after {
-    box-shadow: none;
-    transform: rotate(-45deg);
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      box-shadow: none;
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -84,11 +111,23 @@
   background-color: $blue;
 }
 
+.header__menu-button--open:focus .header__button-icon {
+  background-color: $white;
+}
+
 .header__menu-button:hover .header__button-icon {
   background-color: $white;
 }
 
+.header__menu-button--open:hover .header__button-icon {
+  background-color: $blue;
+}
+
 .header__menu-button:active .header__button-icon {
+  background-color: $white;
+}
+
+.header__menu-button--open:active .header__button-icon {
   background-color: $white;
 }
 
@@ -97,9 +136,19 @@
   background-color: $white;
 }
 
+.header__menu-button--open:focus .header__button-icon::before,
+.header__menu-button--open:focus .header__button-icon::after {
+  background-color: $blue;
+}
+
 .header__menu-button:focus .header__button-icon::after {
   background-color: $white;
   box-shadow: 0 3px 0 $white;
+}
+
+.header__menu-button--open:focus .header__button-icon::after {
+  background-color: $blue;
+  box-shadow: none;
 }
 
 .header__menu-button:hover .header__button-icon::before,
@@ -112,6 +161,12 @@
   box-shadow: 0 3px 0 $blue;
 }
 
+.header__menu-button--open:hover .header__button-icon::before,
+.header__menu-button--open:hover .header__button-icon::after {
+  background-color: $white;
+  box-shadow: none;
+}
+
 .header__menu-button:active .header__button-icon::before,
 .header__menu-button:active .header__button-icon::after {
   background-color: rgba($blue, 0.7);
@@ -122,17 +177,40 @@
   box-shadow: 0 3px 0 rgba($blue, 0.7);
 }
 
+.header__menu-button--open:active .header__button-icon::before,
+.header__menu-button--open:active .header__button-icon::after {
+  background-color: rgba($white, 0.7);
+  box-shadow: none;
+}
+
 .header__navigation {
-  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  max-height: 1000px;
+  margin: auto;
   flex-direction: column;
   max-width: 290px;
-  margin-left: auto;
   padding: 35px 25px;
   background-color: $blue;
   border-radius: 16px;
+  transition: max-height 0.3s ease, padding-block 0.3s ease;
 
   @include media("tablet") {
-    max-width: 289px;
+    max-width: 286px;
+    right: calc((100vw - 768px) * 0.5 + 45px);
+    left: auto;
+    margin: 0;
+  }
+
+  @include media("desktop") {
+    right: calc((100vw - 1440px) * 0.5 + 100px);
+  }
+
+  &--closed {
+    max-height: 0;
+    overflow: hidden;
+    padding-block: 0;
   }
 }
 
@@ -152,8 +230,9 @@
 }
 
 .header__navigation-toggle {
-  margin-bottom: 20px;
+  position: relative;
   padding: 0;
+  padding-right: 22px;
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
@@ -163,10 +242,42 @@
   cursor: pointer;
   text-transform: uppercase;
   opacity: 0.7;
+  transition: margin 0.2s ease-in, opacity 0.3s;
 
   &--active {
     opacity: 1;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url("/__spritemap#sprite-arrowdown-view");
+    transition: transform 0.3s;
+  }
+
+  &--active::before {
+    transform: rotate(180deg);
+  }
+}
+
+.header__subnavigation-list {
+  max-height: 0;
+  padding-top: 0;
+  padding-left: 16px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-out;
+}
+
+.header__navigation-toggle--active + .header__subnavigation-list {
+  max-height: 500px;
+  padding-top: 20px;
+  overflow: visible;
 }
 
 .header__navigation-link,
@@ -182,4 +293,18 @@
 
 .header__navigation-link {
   text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .header__navigation-toggle:hover,
+  .header__navigation-toggle:focus,
+  .header__navigation-link:hover,
+  .header__navigation-link:focus {
+    opacity: 1;
+  }
+
+  .header__navigation-toggle:active,
+  .header__navigation-link:active {
+    opacity: 0.5;
+  }
 }

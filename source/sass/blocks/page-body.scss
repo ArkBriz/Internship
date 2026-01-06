@@ -1,0 +1,27 @@
+.page-body {
+  position: relative;
+
+  &--menu-open,
+  &--form-open {
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $light-black;
+      z-index: 20;
+      animation: fadeIn 0.3s ease;
+    }
+  }
+
+  &--form-open {
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
