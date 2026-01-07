@@ -51,6 +51,18 @@
   }
 }
 
+.programs .section__title {
+  margin-bottom: 35px;
+
+  @include media("tablet") {
+    margin-bottom: 43px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 45px;
+  }
+}
+
 .news .section__title {
   margin-bottom: 24px;
   text-align: center;

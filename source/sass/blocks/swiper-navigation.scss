@@ -1,0 +1,63 @@
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    background-color: $white;
+    outline: none;
+  }
+
+  &:disabled,
+  &:disabled:focus {
+    background-color: transparent;
+  }
+}
+
+.swiper-button-next .swiper-navigation-icon,
+.swiper-button-prev .swiper-navigation-icon {
+  width: 22px;
+  height: 22px;
+  background-color: $blue;
+  mask-image: url("/__spritemap#sprite-arrow-right-view");
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba($blue, 0.7);
+  }
+
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    background-color: rgba($blue, 0.7);
+  }
+}
+
+.swiper-button-prev .swiper-navigation-icon {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next:disabled,
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled:active,
+.swiper-button-prev:disabled:active {
+  cursor: not-allowed;
+
+  & .swiper-navigation-icon {
+    background-color: $grey;
+  }
+}
+
+.swiper-navigation-icon path {
+  display: none;
+}
