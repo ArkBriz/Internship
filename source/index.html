@@ -445,9 +445,9 @@
 
       <section class="section reviews" id="reviews">
         <div class="container">
-          <h2 class="section__title">Отзывы</h2>
-
           <div class="reviews__slider swiper">
+            <h2 class="section__title">Отзывы</h2>
+
             <div class="swiper-wrapper" id="reviews-slider">
               <div class="reviews__slide swiper-slide">
                 <header class="reviews__slide-header">
@@ -505,11 +505,39 @@
                   <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу и всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
                 </blockquote>
               </div>
+
+              <div class="reviews__slide swiper-slide">
+                <header class="reviews__slide-header">
+                  <div class="reviews__slide-author-wrapper">
+                    <picture>
+                      <source srcset="img/reviewer-2@1x.webp 1x, img/reviewer-2@2x.webp 2x" type="image/webp" width="60" height="60">
+                      <img class="reviews__slide-photo" src="img/reviewer-2@1x.png" srcset="img/reviewer-2@1x.png 1x, img/reviewer-2@2x.png 2x" alt="Фото Давида Иванова" loading="lazy">
+                    </picture>
+
+                    <div class="reviews__slide-author">
+                      <div class="reviews__slide-name">Давид</div>
+                      <div class="reviews__slide-surname">Иванов</div>
+                    </div>
+                  </div>
+                  <dl class="reviews__slide-data">
+                    <dt class="reviews__slide-term">Программа</dt>
+                    <dd class="reviews__slide-definition">Volunteer Chance</dd>
+                    <dt class="reviews__slide-term">Дата</dt>
+                    <dd class="reviews__slide-definition">
+                      <time datetime="2022">Лето 2022</time>
+                    </dd>
+                  </dl>
+                </header>
+                <blockquote>
+                  <p class="reviews__slide-heading">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
+                  <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу и всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                </blockquote>
+              </div>
             </div>
 
-            <div class="reviews__pagination swiper-pagination"></div>
+            <div class="reviews__scrollbar swiper-scrollbar"></div>
 
-            <nav class="reviews__navigation" aria-label="Навигация по отзывам">
+            <nav class="reviews__navigation swiper-navigation" aria-label="Навигация по отзывам">
               <button class="swiper-button-prev" type="button" aria-controls="reviews-slider">
                 <span class="visually-hidden">Показать предыдущий</span>
               </button>
