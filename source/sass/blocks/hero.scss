@@ -1,6 +1,10 @@
-.hero__slide {
+.hero__slider {
   position: relative;
   margin-top: -80px;
+}
+
+.hero__slide {
+  position: relative;
   padding-top: 203px;
   padding-bottom: 20px;
 
@@ -222,5 +226,67 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.hero__pagination-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero__pagination {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  top: 211px;
+  left: 31px;
+  z-index: 5;
+
+  @include media("tablet") {
+    top: 700px;
+    left: 65px;
+  }
+
+  @include media("desktop") {
+    top: 447px;
+    left: 120px;
+  }
+}
+
+.hero__pagination .swiper-pagination-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid $blue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include media("tablet") {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover {
+    background-color: $blue;
+    border-color: $white;
+  }
+
+  &:focus {
+    border-color: $blue;
+  }
+
+  &:active,
+  &-active,
+  &-active:hover,
+  &-active:active {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+  }
+
+  &-active {
+    cursor: auto;
   }
 }
