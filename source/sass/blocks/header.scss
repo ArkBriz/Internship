@@ -243,7 +243,9 @@
   cursor: pointer;
   text-transform: uppercase;
   opacity: 0.7;
-  transition: margin 0.2s ease-in, opacity 0.3s;
+  transition:
+    margin 0.2s ease-in,
+    opacity 0.3s;
 
   &--active {
     opacity: 1;

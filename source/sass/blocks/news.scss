@@ -160,6 +160,8 @@
 .news__slide-content {
   position: relative;
   width: 263px;
+  margin-left: -1px;
+  margin-bottom: -1px;
 
   &::before {
     content: "";

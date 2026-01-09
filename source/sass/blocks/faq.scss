@@ -105,6 +105,7 @@
 .faq__question--open + p {
   max-height: 500px;
   margin: 0;
+  margin-top: -1px;
   padding: 0 17px 22px;
   color: $white;
   background-color: $blue;

@@ -691,7 +691,7 @@
 
                 <div class="form__group">
                   <label class="form__label" for="phone">Телефон</label>
-                  <input class="form__input" type="tel" id="phone" name="phone" inputmode="tel" pattern="^\+7\s?\(\d{3}\)\s?\d{3}\-\d{2}\-\d{2}$" required>
+                  <input class="form__input" type="tel" id="phone" name="phone" inputmode="tel" pattern="^\+7\s?[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}$" title="Формат телефона: +79998883322" required>
                 </div>
 
                 <div class="form__group">
@@ -716,7 +716,7 @@
                             aria-haspopup="listbox"
                             aria-controls="custom-listbox"
                             aria-labelledby="city-label custom-select-button-text">
-                      <span class="custom-select__button-text" id="custom-select-button-text">Выберите город</span>
+                      <span class="custom-select__button-text" id="custom-select-button-text"></span>
                     </button>
 
                     <ul class="custom-select__list" id="custom-listbox" role="listbox">
@@ -807,7 +807,7 @@
     <!-- В открытом состоянии добавить атрибуты  role="dialog" aria-modal="true" aria-labelledby="modal-title" -->
     <div class="modal modal--closed" aria-hidden="true">
       <div class="modal__body">
-        <button class="modal__close-button" type="button" aria-label="Закрыть окно"></button>
+        <button class="close-button" type="button" aria-label="Закрыть окно"></button>
 
         <div class="modal__content">
           <h2 class="modal__title" id="modal-title">Напишите нам</h2>
@@ -841,7 +841,7 @@
                         aria-haspopup="listbox"
                         aria-controls="modal-custom-listbox"
                         aria-labelledby="modal-city-label modal-custom-select-button-text">
-                  <span class="custom-select__button-text" id="modal-custom-select-button-text">Выберите город</span>
+                  <span class="custom-select__button-text" id="modal-custom-select-button-text"></span>
                 </button>
 
                 <ul class="custom-select__list" id="modal-custom-listbox" role="listbox">
@@ -864,6 +864,20 @@
             <button class="button form__button" type="submit">Отправить
               <span class="button-icon button-icon--absolute" aria-hidden="true"></span>
             </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-modal result-modal--closed" id="resultModal">
+      <div class="result-modal__body">
+        <button class="close-button close-button--dark" type="button" aria-label="Закрыть окно"></button>
+
+        <div class="result-modal__content">
+          <div class="result-modal__icon result-modal__icon--success"></div>
+          <div class="result-modal__icon result-modal__icon--error"></div>
+
+          <h3 class="result-modal__title"></h3>
+          <p class="result-modal__message"></p>
         </div>
       </div>
     </div>

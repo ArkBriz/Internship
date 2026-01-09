@@ -1,0 +1,92 @@
+.result-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $light-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.result-modal__body {
+  background-color: $blue;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  border: 1px solid rgba($white, 0.3);
+}
+
+.result-modal__content {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.result-modal__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+
+  &--success {
+    display: none;
+    background-color: #4CAF50;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      background-image: url("/__spritemap#sprite-success-view");
+    }
+  }
+
+  &--error {
+    display: none;
+    background-color: $red;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      background-image: url("/__spritemap#sprite-error-view");
+    }
+  }
+}
+
+.result-modal__title {
+  font-size: 24px;
+  line-height: 32px;
+  color: $white;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.result-modal__message {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba($white, 0.8);
+}
