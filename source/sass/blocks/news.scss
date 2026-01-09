@@ -57,9 +57,11 @@
   }
 }
 
+.news__slider {
+  position: relative;
+}
+
 .news__slide {
-  display: grid;
-  align-items: end;
   max-width: 290px;
   min-height: 330px;
   background-color: $beige;
@@ -148,6 +150,11 @@
       background-position: -43px 0;
     }
   }
+}
+
+.news__slide.swiper-slide {
+  display: grid;
+  align-items: end;
 }
 
 .news__slide-content {
@@ -347,6 +354,101 @@
 
     &::before {
       background-color: $blue;
+    }
+  }
+}
+
+.news__pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 200px;
+  margin-top: 24px;
+  margin-inline: auto;
+  transition: transform 0.3s;
+  z-index: 2;
+
+  @include media("tablet") {
+    gap: 20px;
+    width: 300px;
+    margin-top: 30px;
+  }
+
+  @include media("desktop") {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 767px) {
+    &--top {
+      transform: translateY(-90px);
+    }
+  }
+}
+
+.news__pagination .swiper-pagination-bullet {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  color: $blue;
+  border: none;
+  border-radius: 50%;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border 0.3s ease;
+
+  &-active {
+    color: $white;
+    background-color: $blue;
+  }
+
+  @include media("tablet") {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $blue;
+  }
+
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+  }
+
+  &-active:hover,
+  &-active:focus,
+  &-active:active {
+    border: none;
+    background-color: $blue;
+  }
+}
+
+.news__navigation {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  bottom: 5px;
+  transition: transform 0.3s;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    &--top {
+      transform: translateY(-90px);
     }
   }
 }
