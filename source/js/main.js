@@ -9,3 +9,5 @@ import '../js/accordion.js';
 import './form-validation.js';
 import '../js/modal.js';
 import '../js/custom-select.js';
+import '../js/result-modal.js';
+import '../js/form-submit.js';

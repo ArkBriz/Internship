@@ -686,7 +686,7 @@
               <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__group">
                   <label class="form__label" for="name">Имя</label>
-                  <input class="form__input" type="text" id="name" name="name" title="Введите ваше имя" pattern="[A-Za-zА-Яа-яЁё -]+" minlength="2" required>
+                  <input class="form__input" type="text" id="name" name="name" title="Введите ваше имя" pattern="[A-Za-zА-Яа-яЁё \-]+" minlength="2" required>
                 </div>
 
                 <div class="form__group">
@@ -805,7 +805,6 @@
       </div>
     </footer>
 
-    <!-- В открытом состоянии добавить атрибуты  role="dialog" aria-modal="true" aria-labelledby="modal-title" -->
     <div class="modal modal--closed" aria-hidden="true">
       <div class="modal__body">
         <button class="close-button" type="button" aria-label="Закрыть окно"></button>
@@ -817,17 +816,17 @@
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__group">
               <label class="form__label" for="modal-name">Имя</label>
-              <input class="form__input" type="text" id="modal-name" name="name" required>
+              <input class="form__input" type="text" id="modal-name" name="name" title="Введите ваше имя" pattern="[A-Za-zА-Яа-яЁё \-]+" minlength="2" required>
             </div>
 
             <div class="form__group">
               <label class="form__label" for="modal-phone">Телефон</label>
-              <input class="form__input" type="tel" id="modal-phone" name="phone" inputmode="tel" pattern="^\+7\s?\(\d{3}\)\s?\d{3}\-\d{2}\-\d{2}$" required>
+              <input class="form__input" type="tel" id="modal-phone" name="phone" inputmode="tel" pattern="\+7\d{10}" title="Введите номер телефона в формате +79998883322" required>
             </div>
 
             <div class="form__group">
               <label class="form__label" for="modal-city" id="modal-city-label">Выберите город</label>
-              <select class="visually-hidden" id="modal-city" name="city" aria-labelledby="modal-city-label" tabindex="-1 required>
+              <select class="visually-hidden" id="modal-city" name="city" aria-labelledby="modal-city-label" tabindex="-1" required>
                 <option value="" disabled selected></option>
                 <option value="saint-petersburg">Санкт-Петербург</option>
                 <option value="moscow">Москва</option>
@@ -865,6 +864,7 @@
             <button class="button form__button" type="submit">Отправить
               <span class="button-icon button-icon--absolute" aria-hidden="true"></span>
             </button>
+          </form>
         </div>
       </div>
     </div>
@@ -874,9 +874,7 @@
         <button class="close-button close-button--dark" type="button" aria-label="Закрыть окно"></button>
 
         <div class="result-modal__content">
-          <div class="result-modal__icon result-modal__icon--success"></div>
-          <div class="result-modal__icon result-modal__icon--error"></div>
-
+          <div class="result-modal__icon"></div>
           <h3 class="result-modal__title"></h3>
           <p class="result-modal__message"></p>
         </div>
