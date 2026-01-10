@@ -53,7 +53,7 @@
     cursor: not-allowed ;
   }
 
-  &:invalid:focus {
+  &:user-invalid:focus {
     background-color: rgba($red, 0.2);
     border-color: $red;
   }

@@ -686,7 +686,7 @@
               <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__group">
                   <label class="form__label" for="name">Имя</label>
-                  <input class="form__input" type="text" id="name" name="name" required>
+                  <input class="form__input" type="text" id="name" name="name" title="Введите ваше имя" pattern="[A-Za-zА-Яа-яЁё -]+" minlength="2" required>
                 </div>
 
                 <div class="form__group">
@@ -696,7 +696,7 @@
 
                 <div class="form__group">
                   <label class="form__label" for="message">Ваше сообщение</label>
-                  <textarea class="form__input" id="message" name="message" rows="3" required></textarea>
+                  <textarea class="form__input" id="message" name="message" rows="3"></textarea>
                 </div>
 
                 <div class="form__group">
@@ -715,7 +715,8 @@
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-controls="custom-listbox"
-                            aria-labelledby="city-label custom-select-button-text">
+                            aria-labelledby="city-label custom-select-button-text"
+                            title="Выберите ваш город">
                       <span class="custom-select__button-text" id="custom-select-button-text"></span>
                     </button>
 
