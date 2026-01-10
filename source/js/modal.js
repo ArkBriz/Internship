@@ -1,7 +1,7 @@
 const body = document.querySelector('.page-body');
 const modal = document.querySelector('.modal');
 const openButton = document.querySelector('.about__block .button');
-const closeButton = modal.querySelector('.modal__close-button');
+const closeButton = modal.querySelector('.close-button');
 
 const closeModal = () => {
   modal.setAttribute('aria-hidden', 'true');

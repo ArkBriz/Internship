@@ -1,125 +1,129 @@
-const select = document.getElementById('city');
-const customSelect = document.querySelector('.custom-select');
-const button = document.querySelector('.custom-select__button');
-const buttonText = document.querySelector('.custom-select__button-text');
-const list = document.querySelector('.custom-select__list');
-const customOptions = Array.from(document.querySelectorAll('.custom-select__option'));
+const initCustomSelect = (customSelect) => {
+  const select = customSelect.closest('.form__group').querySelector('select');
 
-let currentIndex = -1;
+  const button = customSelect.querySelector('.custom-select__button');
+  const buttonText = customSelect.querySelector('.custom-select__button-text');
+  const list = customSelect.querySelector('.custom-select__list');
+  const customOptions = Array.from(customSelect.querySelectorAll('.custom-select__option'));
 
-const openSelect = () => {
-  list.classList.add('custom-select__list--open');
-  button.setAttribute('aria-expanded', 'true');
-};
+  let currentIndex = -1;
 
-const closeSelect = () => {
-  list.classList.remove('custom-select__list--open');
-  button.setAttribute('aria-expanded', 'false');
+  const openSelect = () => {
+    list.classList.add('custom-select__list--open');
+    button.setAttribute('aria-expanded', 'true');
+  };
 
-  currentIndex = -1;
+  const closeSelect = () => {
+    list.classList.remove('custom-select__list--open');
+    button.setAttribute('aria-expanded', 'false');
 
-  customOptions.forEach((option) => {
-    option.classList.remove('custom-select__option--focused');
-  });
-};
+    currentIndex = -1;
 
-const toggleSelect = () => {
-  list.classList.contains('custom-select__list--open')
-    ? closeSelect()
-    : openSelect();
-};
+    customOptions.forEach((option) => {
+      option.classList.remove('custom-select__option--focused');
+    });
+  };
 
-const selectOption = (option) => {
-  const value = option.dataset.value;
-  const text = option.textContent;
+  const toggleSelect = () => {
+    list.classList.contains('custom-select__list--open')
+      ? closeSelect()
+      : openSelect();
+  };
 
-  buttonText.textContent = text;
-  select.value = value;
+  const selectOption = (option) => {
+    const value = option.dataset.value;
+    const text = option.textContent;
 
-  select.dispatchEvent(new Event('change', { bubbles: true }));
+    buttonText.textContent = text;
+    select.value = value;
 
-  closeSelect();
-  button.focus();
-};
+    select.dispatchEvent(new Event('change', { bubbles: true }));
 
-button.addEventListener('click', toggleSelect);
-
-customOptions.forEach((option, index) => {
-  option.addEventListener('click', () => {
-    selectOption(option);
-  });
-
-  option.addEventListener('mouseenter', (evt) => {
-    customOptions.forEach((option) => option.classList.remove('custom-select__option--hovered'));
-
-    option.classList.add('custom-select__option--hovered');
-    currentIndex = index;
-  });
-});
-
-list.addEventListener('mouseleave', (evt) =>{
-  customOptions.forEach((option) => {
-    option.classList.remove('custom-select__option--hovered');
-  });
-});
-
-window.addEventListener('click', (evt) => {
-  if(!customSelect.contains(evt.target)) {
     closeSelect();
-  }
-});
+    button.focus();
+  };
 
-const focusOption = (index) => {
-  if (index < 0) index = customOptions.length - 1;
-  if (index >= customOptions.length) index = 0;
+  button.addEventListener('click', toggleSelect);
 
-  customOptions.forEach((option) => {
-    option.classList.remove('custom-select__option--focused');
+  customOptions.forEach((option, index) => {
+    option.addEventListener('click', () => {
+      selectOption(option);
+    });
+
+    option.addEventListener('mouseenter', (evt) => {
+      customOptions.forEach((option) => option.classList.remove('custom-select__option--hovered'));
+
+      option.classList.add('custom-select__option--hovered');
+      currentIndex = index;
+    });
   });
 
-  customOptions[index].classList.add('custom-select__option--focused');
-  customOptions[index].focus();
-  currentIndex = index;
-};
+  list.addEventListener('mouseleave', (evt) =>{
+    customOptions.forEach((option) => {
+      option.classList.remove('custom-select__option--hovered');
+    });
+  });
 
-button.addEventListener('keydown', (evt)=> {
-  if (evt.key === 'Enter' || evt.key === ' ') {
-    evt.preventDefault();
-    openSelect();
-    focusOption(0);
-  }
-});
-
-list.addEventListener('keydown', (evt) => {
-  switch (evt.key) {
-    case 'ArrowDown':
-      evt.preventDefault();
-      focusOption(currentIndex + 1);
-      break;
-
-    case 'ArrowUp':
-      evt.preventDefault();
-      focusOption(currentIndex - 1);
-      break;
-
-    case 'Enter':
-    case ' ':
-      evt.preventDefault();
-      if (currentIndex >= 0) {
-        selectOption(customOptions[currentIndex]);
-      }
-      break;
-
-    case 'Escape':
-      evt.preventDefault();
+  window.addEventListener('click', (evt) => {
+    if(!customSelect.contains(evt.target)) {
       closeSelect();
-      button.focus();
-      break;
-  }
-});
+    }
+  });
 
-customSelect.addEventListener('focusout', (evt) => {
-  if (!customSelect.contains(evt.relatedTarget)) {
-    closeSelect();
-  }
-});
+  const focusOption = (index) => {
+    if (index < 0) index = customOptions.length - 1;
+    if (index >= customOptions.length) index = 0;
+
+    customOptions.forEach((option) => {
+      option.classList.remove('custom-select__option--focused');
+    });
+
+    customOptions[index].classList.add('custom-select__option--focused');
+    customOptions[index].focus();
+    currentIndex = index;
+  };
+
+  button.addEventListener('keydown', (evt)=> {
+    if (evt.key === 'Enter' || evt.key === ' ') {
+      evt.preventDefault();
+      openSelect();
+      focusOption(0);
+    }
+  });
+
+  list.addEventListener('keydown', (evt) => {
+    switch (evt.key) {
+      case 'ArrowDown':
+        evt.preventDefault();
+        focusOption(currentIndex + 1);
+        break;
+
+      case 'ArrowUp':
+        evt.preventDefault();
+        focusOption(currentIndex - 1);
+        break;
+
+      case 'Enter':
+      case ' ':
+        evt.preventDefault();
+        if (currentIndex >= 0) {
+          selectOption(customOptions[currentIndex]);
+        }
+        break;
+
+      case 'Escape':
+        evt.preventDefault();
+        closeSelect();
+        button.focus();
+        break;
+    }
+  });
+
+  customSelect.addEventListener('focusout', (evt) => {
+    if (!customSelect.contains(evt.relatedTarget)) {
+      closeSelect();
+    }
+  });
+}
+
+document.querySelectorAll('.custom-select').forEach(initCustomSelect);
