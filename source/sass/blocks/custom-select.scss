@@ -30,10 +30,9 @@
     bottom: 0;
     margin: auto;
     background-image: url("/__spritemap#sprite-arrowdown-view");
-    transition: transform 0.3s;
   }
 
-  &--open::before {
+  &[aria-expanded="true"]::before {
     transform: rotate(180deg);
   }
 
@@ -41,6 +40,7 @@
   &:focus,
   &--open {
     border-color: $white;
+    outline: none;
   }
 
   &:disabled,
@@ -75,6 +75,14 @@
   &--open {
     display: block;
   }
+
+  @include media("tablet") {
+    width: 362px;
+  }
+
+  @include media("desktop") {
+    width: 350px;
+  }
 }
 
 .custom-select__option {
@@ -84,11 +92,11 @@
     color 0.3s,
     background-color 0.3s;
 
-  &:hover {
+  &--hovered {
     color: $blue;
   }
 
-  &:focus {
+  &--focused {
     color: $white;
     background-color: $blue;
     outline: 1px solid $white;

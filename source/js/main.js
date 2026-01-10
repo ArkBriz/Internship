@@ -6,5 +6,6 @@ import '../js/sliders/programs-slider.js';
 import '../js/sliders/news-slider.js';
 import '../js/sliders/reviews-slider.js';
 import '../js/accordion.js';
-import '../js/form.js';
+import './form-validation.js';
 import '../js/modal.js';
+import '../js/custom-select.js';
