@@ -35,6 +35,7 @@
   line-height: 1;
   font-weight: 500;
   color: rgba($blue, 0.6);
+  background-color: $beige;
   text-transform: uppercase;
 
   border: none;
@@ -54,6 +55,23 @@
 
   @include media("desktop") {
     padding: 16px 35px;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    &:focus {
+      background-color: $white;
+      outline: none;
+    }
+
+    &--active:focus {
+      background-color: $beige;
+      outline: 2px solid $blue;
+    }
   }
 }
 

@@ -58,9 +58,8 @@
 
 .custom-select__list {
   position: absolute;
-  display: none;
   width: 260px;
-  max-height: 200px;
+  max-height: 0px;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -69,11 +68,14 @@
   background-color: $white;
   border-radius: 8px;
   list-style-type: none;
-  overflow-y: auto;
   z-index: 10;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 
   &--open {
-    display: block;
+    max-height: 300px;
   }
 
   @include media("tablet") {

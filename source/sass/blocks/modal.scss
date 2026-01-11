@@ -133,11 +133,14 @@
 }
 
 .modal .custom-select__list {
-  display: none;
-  border: 1px solid $black;
+  border: 1px solid $white;
 
   &--open {
-    display: block;
+    border-color: $black;
+  }
+
+  @include media("tablet") {
+    width: 350px;
   }
 }
 
