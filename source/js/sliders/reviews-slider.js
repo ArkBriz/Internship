@@ -8,6 +8,7 @@ new Swiper('.reviews__slider', {
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   spaceBetween: 15,
+  allowTouchMove: true,
 
   breakpoints: {
     768: {

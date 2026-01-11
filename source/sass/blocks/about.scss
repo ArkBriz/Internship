@@ -1,5 +1,6 @@
 .about__wrapper {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -69,6 +70,12 @@
   @include media("desktop") {
     margin-bottom: 50px;
   }
+}
+
+.about__block-inner {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .about__stats-list {

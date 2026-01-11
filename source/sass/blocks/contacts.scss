@@ -1,6 +1,7 @@
 .contacts__wrapper {
   @include media("desktop") {
-    display: flex;
+    display: grid;
+    grid-template-columns: 540px 1fr;
   }
 }
 
@@ -18,11 +19,12 @@
 
   @include media("tablet") {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: 401px 132px 104px;
     gap: 24px 20.5px;
   }
 
   @include media("desktop") {
+    grid-template-columns: 263px 132px 104px;
     margin-bottom: 40px;
     column-gap: 52.5px;
   }

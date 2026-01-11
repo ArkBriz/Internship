@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  padding-top: 20px;
   z-index: 30;
   background-color: transparent;
 }
@@ -9,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 4px;
+  padding-block: 2px;
 }
 
 .header__menu-button {
@@ -25,11 +26,13 @@
 
   &--open {
     min-width: 290px;
+    max-width: 290px;
     background-color: $blue;
     color: $white;
 
     @include media("tablet") {
       min-width: 286px;
+      max-width: 286px;
       right: 0;
     }
 
@@ -187,8 +190,9 @@
   position: absolute;
   right: 0;
   left: 0;
-  max-height: 1000px;
+  max-height: 2000px;
   margin: auto;
+  margin-top: 4px;
   flex-direction: column;
   max-width: 290px;
   padding: 35px 25px;
@@ -197,10 +201,11 @@
   transition: max-height 0.3s ease, padding-block 0.3s ease;
 
   @include media("tablet") {
-    max-width: 286px;
+    width: 286px;
     right: calc((100vw - 768px) * 0.5 + 45px);
     left: auto;
     margin: 0;
+    margin-top: 4px;
   }
 
   @include media("desktop") {
@@ -304,12 +309,16 @@
   .header__navigation-toggle:hover,
   .header__navigation-toggle:focus,
   .header__navigation-link:hover,
-  .header__navigation-link:focus {
+  .header__navigation-link:focus,
+  .header__subnavigation-link:hover,
+  .header__subnavigation-link:focus {
     opacity: 1;
+    outline: none;
   }
 
   .header__navigation-toggle:active,
-  .header__navigation-link:active {
+  .header__navigation-link:active,
+  .header__subnavigation-link:active {
     opacity: 0.5;
   }
 }

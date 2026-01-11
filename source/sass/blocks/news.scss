@@ -30,6 +30,7 @@
 }
 
 .news__filters-tab {
+  max-width: 157px;
   padding: 12px 16px;
   font-size: 12px;
   line-height: 1;
@@ -54,6 +55,7 @@
   }
 
   @include media("desktop") {
+    max-width: 240px;
     padding: 16px 35px;
   }
 
@@ -408,7 +410,7 @@
 
 .news__pagination .swiper-pagination-bullet {
   width: 26px;
-  height: 26px;
+  min-height: 26px;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -429,7 +431,7 @@
 
   @include media("tablet") {
     width: 32px;
-    height: 32px;
+    min-height: 32px;
     font-size: 16px;
     line-height: 20px;
   }

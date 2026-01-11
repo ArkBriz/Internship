@@ -3,7 +3,7 @@ import { Pagination, Navigation, Grid } from "swiper/modules";
 import 'swiper/css/grid';
 
 
-const getPaginationRange = (activeInd, total) => {
+export const getPaginationRange = (activeInd, total) => {
   if (total <= 4) {
     return [0, total - 1];
   }
@@ -19,9 +19,9 @@ const getPaginationRange = (activeInd, total) => {
   return [activeInd - 2, activeInd + 1];
 };
 
-const renderBullet = (index, className) => {
+export const renderBullet = (index, className, getContent = (i) => i + 1) => {
   return `
-    <button class="${className}" type="button" aria-label="Перейти к слайду ${index + 1}">${index + 1}</button>
+    <button class="${className}" type="button" aria-label="Перейти к слайду ${index + 1}">${getContent(index)}</button>
   `;
 };
 

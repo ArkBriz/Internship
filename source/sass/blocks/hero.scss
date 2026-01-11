@@ -1,6 +1,6 @@
 .hero__slider {
   position: relative;
-  margin-top: -80px;
+  margin-top: -100px;
 }
 
 .hero__slide {
@@ -118,7 +118,7 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     --nb-r: 20px;
-    --nb-w: 540px;
+    --nb-w: 520px;
     --nb-h: -7px;
 
     &--first {
@@ -260,6 +260,7 @@
   display: block;
   width: 8px;
   height: 8px;
+  padding: 0;
   border: 2px solid $blue;
   border-radius: 50%;
   cursor: pointer;
