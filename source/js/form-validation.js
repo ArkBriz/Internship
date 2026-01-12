@@ -1,7 +1,7 @@
 // validation for name form field
 const initNameValidation = (nameInput) => {
   nameInput.addEventListener('input', () => {
-    nameInput.value = nameInput.value.replace(/[^A-Za-zА-Яа-яЁё \-]+/g, '');
+    nameInput.value = nameInput.value.replace(/[^A-Za-zА-Яа-яЁё -]+/g, '');
   });
 
   nameInput.addEventListener('blur', () => {
@@ -10,7 +10,6 @@ const initNameValidation = (nameInput) => {
 };
 
 document.querySelectorAll('.form__input[name="name"]').forEach(initNameValidation);
-
 
 
 // +7 mask for phone form field
@@ -39,6 +38,3 @@ const initPhoneInputMask = (phoneInput) => {
 };
 
 document.querySelectorAll('.form__input[name="phone"]').forEach(initPhoneInputMask);
-
-
-

@@ -53,7 +53,7 @@
 .swiper-button-prev:disabled:active {
   cursor: not-allowed;
 
-  & .swiper-navigation-icon {
+  .swiper-navigation-icon {
     background-color: $grey;
   }
 }

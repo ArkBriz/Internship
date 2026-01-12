@@ -254,18 +254,18 @@
   .footer__social-link:focus {
     background-color: $white;
     outline: none;
+  }
 
-    & .footer__social-icon {
-      background-color: $blue;
-    }
+  .footer__social-link:focus .footer__social-icon {
+    background-color: $blue;
   }
 
   .footer__social-link:active {
     background-color: $dark-blue;
     outline: none;
+  }
 
-    & .footer__social-icon {
-      background-color: $white;
-    }
+  .footer__social-link:active .footer__social-icon {
+    background-color: $white;
   }
 }

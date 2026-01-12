@@ -6,12 +6,11 @@ const openButton = document.querySelector('.about__block .button');
 const closeButton = modal.querySelector('.close-button');
 
 const closeModal = () => {
-  modal.setAttribute('aria-hidden', 'true');
   modal.classList.add('modal--closed');
   body.classList.remove('page-body--modal-open');
 
   ['role', 'aria-modal', 'aria-labelledby']
-    .forEach(attr => modal.removeAttribute(attr));
+    .forEach((attr) => modal.removeAttribute(attr));
 
   closeButton.removeEventListener('click', closeModal);
   document.removeEventListener('keydown', onEscKeydown);
@@ -23,7 +22,6 @@ const closeModal = () => {
 const openModal = () => {
   modal.classList.remove('modal--closed');
   body.classList.add('page-body--modal-open');
-  modal.setAttribute('aria-hidden', 'false');
 
   const attrs = {
     'role': 'dialog',
@@ -51,6 +49,6 @@ function onOutsideClick (evt) {
   if (evt.target === modal) {
     closeModal();
   }
-};
+}
 
 openButton.addEventListener('click', openModal);

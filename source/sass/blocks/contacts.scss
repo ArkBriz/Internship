@@ -52,10 +52,6 @@
     margin-bottom: 0;
   }
 
-  & br {
-    display: none;
-  }
-
   @include media("tablet") {
     margin-bottom: 0;
   }
@@ -64,10 +60,14 @@
     &:first-of-type {
       margin-top: 4px;
     }
+  }
+}
 
-    & br {
-      display: block;
-    }
+.contacts__definition br {
+  display: none;
+
+  @include media("desktop") {
+    display: block;
   }
 }
 

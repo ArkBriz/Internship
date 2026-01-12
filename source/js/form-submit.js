@@ -1,4 +1,4 @@
-import { showResult } from "./result-modal";
+import { showResult } from './result-modal';
 
 const initFormSending = (form) => {
   form.addEventListener('submit', async (evt) => {

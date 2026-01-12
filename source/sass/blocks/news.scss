@@ -212,18 +212,21 @@
   padding-right: 10px;
   background-color: $beige;
   border-top-right-radius: 12px;
+
   --nb-r: 14px;
   --nb-w: 92px;
   --nb-h: 2px;
 
   @include media("tablet") {
     padding-top: 7px;
+
     --nb-w: 99px;
   }
 
   @include media("desktop") {
     width: 192px;
     margin-top: 0;
+
     --nb-w: 85px;
     --nb-h: 4px;
   }
@@ -232,6 +235,7 @@
 .news__slide--first .news__slide-content-inner {
   @include media("desktop") {
     width: 428px;
+
     --nb-w: 315px;
   }
 }
@@ -275,6 +279,7 @@
 
 .news__slide--first .news__slide-title {
   @include media("desktop") {
+    width: 408px;
     margin-top: 18px;
     padding-bottom: 8px;
   }
@@ -303,12 +308,6 @@
 
   @include media("tablet") {
     display: block;
-  }
-}
-
-.news__slide--first .news__slide-title {
-  @include media("desktop") {
-    width: 408px;
   }
 }
 
@@ -348,10 +347,6 @@
     gap: 16px;
     padding-bottom: 15px;
 
-    & br {
-      display: none;
-    }
-
     &::before {
       right: 17px;
     }
@@ -367,6 +362,12 @@
     &::after {
       right: -15px;
     }
+  }
+}
+
+.news__slide-container br {
+  @include media("tablet") {
+    display: none;
   }
 }
 
@@ -461,7 +462,7 @@
     margin-top: 40px;
   }
 
-  @media (max-width: 767px) {
+  @media (width <= 767px) {
     &--top {
       transform: translateY(-90px);
     }
@@ -484,11 +485,6 @@
     background-color 0.3s ease,
     border 0.3s ease;
 
-  &-active {
-    color: $white;
-    background-color: $blue;
-  }
-
   @include media("tablet") {
     width: 32px;
     min-height: 32px;
@@ -510,12 +506,19 @@
     background-color: $dark-blue;
     border-color: $dark-blue;
   }
+}
 
-  &-active:hover,
-  &-active:focus,
-  &-active:active {
-    border: none;
-    background-color: $blue;
+.news__pagination .swiper-pagination-bullet-active {
+  color: $white;
+  background-color: $blue;
+
+  @include media("tablet") {
+    &:hover,
+    &:focus,
+    &:active {
+      border: none;
+      background-color: $blue;
+    }
   }
 }
 
@@ -528,7 +531,7 @@
   transition: transform 0.3s;
   z-index: 1;
 
-  @media (max-width: 767px) {
+  @media (width <= 767px) {
     &--top {
       transform: translateY(-90px);
     }

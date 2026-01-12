@@ -1,6 +1,6 @@
-import Swiper from "swiper";
-import { Pagination } from "swiper/modules";
-import { getPaginationRange, renderBullet } from "./news-slider";
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import { getPaginationRange, renderBullet } from './news-slider';
 
 const slides = document.querySelectorAll('.hero__slide');
 
@@ -47,7 +47,7 @@ const updatePagination = (slider) => {
   });
 };
 
-const heroSlider = new Swiper('.hero__slider', {
+new Swiper('.hero__slider', {
   modules: [Pagination],
   loop: true,
   autoHeight: true,
@@ -55,9 +55,7 @@ const heroSlider = new Swiper('.hero__slider', {
 
   pagination: {
     el: '.hero__pagination',
-    renderBullet: (index, className) => {
-      return renderBullet(index, className, () => '')
-    },
+    renderBullet: (index, className) => renderBullet(index, className, () => ''),
   },
 
   breakpoints: {

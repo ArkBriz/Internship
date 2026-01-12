@@ -93,7 +93,7 @@
   &:disabled:hover {
     background-color: rgba($white, 0.2);
     border-color: rgba($white, 0.4);
-    cursor: not-allowed ;
+    cursor: not-allowed;
   }
 
   &:user-invalid:focus {

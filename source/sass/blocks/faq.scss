@@ -156,7 +156,7 @@
 .faq__question + p {
   max-height: 0;
   margin: 0;
-  padding: 0 17px 0;
+  padding: 0 17px;
   color: $white;
   background-color: $blue;
   border-bottom-left-radius: 14px;
@@ -167,13 +167,13 @@
     padding 0.2s ease;
 
   @include media("tablet") {
-    padding: 0 32px 0;
+    padding: 0 32px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
   }
 
   @include media("desktop") {
-    padding: 0 42px 0;
+    padding: 0 42px;
   }
 }
 
@@ -212,7 +212,7 @@
   transition: background-color 0.3s ease;
 
   &::before,
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -266,6 +266,7 @@
     top: 20px;
   }
 }
+
 .faq__question--4 .faq__icon,
 .faq__question--5 .faq__icon {
   @include media("tablet") {

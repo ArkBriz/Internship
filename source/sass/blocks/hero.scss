@@ -114,6 +114,7 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+
   --nb-r: 12px;
   --nb-w: 186px;
   --nb-h: 3px;
@@ -125,6 +126,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+
     --nb-r: 20px;
     --nb-w: 520px;
     --nb-h: 0px;
@@ -137,9 +139,10 @@
   }
 
   @include media("desktop") {
-    padding: 80px 50px 30px;;
+    padding: 80px 50px 30px;
     font-size: 54px;
     line-height: 62px;
+
     --nb-w: 830px;
     --nb-h: 0px;
   }
@@ -176,6 +179,7 @@
   background-color: $white;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
+
   --nb-r: 12px;
   --nb-w: 59px;
   --nb-h: 40px;
@@ -190,6 +194,7 @@
     padding: 0 40px 35px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+
     --nb-r: 0px;
     --nb-w: 0px;
     --nb-h: 0px;
@@ -217,10 +222,12 @@
   @include media("desktop") {
     width: 417px;
     line-height: 27px;
+  }
+}
 
-    & br {
-      display: none;
-    }
+.hero__slide-content p br {
+  @include media("desktop") {
+    display: none;
   }
 }
 
@@ -297,15 +304,20 @@
     border-color: $blue;
   }
 
-  &:active,
-  &-active,
-  &-active:hover,
-  &-active:active {
+  &:active {
     background-color: $dark-blue;
     border-color: $dark-blue;
   }
+}
 
-  &-active {
-    cursor: auto;
+.hero__pagination .swiper-pagination-bullet-active {
+  background-color: $dark-blue;
+  border-color: $dark-blue;
+  cursor: auto;
+
+  &:hover,
+  &:active {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
   }
 }

@@ -1,5 +1,5 @@
 .programs .container {
-  @media (min-width: 768px) and (max-width: 1439px) {
+  @media (width >= 768px) and (width <= 1439px) {
     max-width: 100%;
   }
 }
@@ -49,7 +49,7 @@
 .programs__slider.swiper {
   position: relative;
 
-  @media (min-width: 768px) and (max-width: 1439px) {
+  @media (width >= 768px) and (width <= 1439px) {
     margin-left: -45px;
     margin-right: -45px;
     padding-left: 45px;
@@ -185,6 +185,7 @@
   background-color: $white;
   border-radius: 12px;
   z-index: 2;
+
   --nb-r: 17px;
   --nb-h: 8px;
   --nb-w: 90px;
@@ -193,12 +194,14 @@
     width: 284px;
     min-height: 125px;
     padding-top: 19px;
+
     --nb-w: 77px;
     --nb-h: 4px;
   }
 
   @include media("desktop") {
     width: 321px;
+
     --nb-h: 7px;
     --nb-w: 92px;
   }

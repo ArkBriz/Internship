@@ -11,14 +11,14 @@ const resetTabindex = () => {
   submenuTogglers.forEach((toggler) => {
     toggler.setAttribute('tabindex', '-1');
   });
-}
+};
 
 const updateTabIndex = () => {
   resetTabindex();
 
   if (menu.classList.contains('header__navigation--closed')) {
     return;
-  };
+  }
 
   const links = menu.querySelectorAll('.header__navigation-link');
 
@@ -52,7 +52,6 @@ const toggleMenu = () => {
   body.classList.toggle('page-body--menu-open');
 
   menuToggler.setAttribute('aria-expanded', isClosed ? 'true' : 'false');
-  menu.setAttribute('aria-hidden', isClosed ? 'false' : 'true');
 
   updateTabIndex();
 };
@@ -64,7 +63,6 @@ const closeMenu = () => {
     body.classList.remove('page-body--menu-open');
 
     menuToggler.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('aria-hidden', 'true');
 
     resetTabindex();
   }
@@ -80,7 +78,7 @@ submenuTogglers.forEach((toggler) => {
     toggler.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
 
     updateTabIndex();
-  })
+  });
 });
 
 menuLinks.forEach((link) => {
@@ -115,6 +113,6 @@ document.addEventListener('focusin', (evt) => {
   if (!menu.classList.contains('header__navigation--closed') &&
     !menu.contains(evt.target) &&
     evt.target !== menuToggler) {
-      closeMenu();
-    }
+    closeMenu();
+  }
 });

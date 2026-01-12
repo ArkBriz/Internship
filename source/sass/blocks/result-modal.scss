@@ -37,41 +37,41 @@
   height: 64px;
   margin: 0 auto 20px;
   border-radius: 50%;
+}
 
-  &--success {
-    background-color: #4CAF50;
-    position: relative;
+.result-modal__icon--success {
+  background-color: #4caf50;
+  position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      width: 20px;
-      height: 20px;
-      background-image: url("/__spritemap#sprite-success-view");
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-image: url("/__spritemap#sprite-success-view");
   }
+}
 
-  &--error {
-    background-color: $red;
-    position: relative;
+.result-modal__icon--error {
+  background-color: $red;
+  position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      width: 20px;
-      height: 20px;
-      background-image: url("/__spritemap#sprite-error-view");
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-image: url("/__spritemap#sprite-error-view");
   }
 }
 

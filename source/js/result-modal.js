@@ -47,6 +47,6 @@ function onOutsideClick (evt) {
   if (evt.target === resultModal) {
     closeModal();
   }
-};
+}
 
 export { showResult };

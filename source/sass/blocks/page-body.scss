@@ -1,20 +1,18 @@
 .page-body {
   position: relative;
 
-  &--menu-open {
-    &::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: $light-black;
-      z-index: 20;
-    }
-  }
-
   &--modal-open {
     overflow: hidden;
   }
+}
+
+.page-body--menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $light-black;
+  z-index: 20;
 }

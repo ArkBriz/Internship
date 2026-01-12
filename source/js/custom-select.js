@@ -25,9 +25,11 @@ const initCustomSelect = (customSelect) => {
   };
 
   const toggleSelect = () => {
-    list.classList.contains('custom-select__list--open')
-      ? closeSelect()
-      : openSelect();
+    if (list.classList.contains('custom-select__list--open')) {
+      closeSelect();
+    } else {
+      openSelect();
+    }
   };
 
   const selectOption = (option) => {
@@ -50,15 +52,15 @@ const initCustomSelect = (customSelect) => {
       selectOption(option);
     });
 
-    option.addEventListener('mouseenter', (evt) => {
-      customOptions.forEach((option) => option.classList.remove('custom-select__option--hovered'));
+    option.addEventListener('mouseenter', () => {
+      customOptions.forEach((opt) => opt.classList.remove('custom-select__option--hovered'));
 
       option.classList.add('custom-select__option--hovered');
       currentIndex = index;
     });
   });
 
-  list.addEventListener('mouseleave', (evt) =>{
+  list.addEventListener('mouseleave', () =>{
     customOptions.forEach((option) => {
       option.classList.remove('custom-select__option--hovered');
     });
@@ -71,8 +73,12 @@ const initCustomSelect = (customSelect) => {
   });
 
   const focusOption = (index) => {
-    if (index < 0) index = customOptions.length - 1;
-    if (index >= customOptions.length) index = 0;
+    if (index < 0) {
+      index = customOptions.length - 1;
+    }
+    if (index >= customOptions.length) {
+      index = 0;
+    }
 
     customOptions.forEach((option) => {
       option.classList.remove('custom-select__option--focused');
@@ -124,6 +130,6 @@ const initCustomSelect = (customSelect) => {
       closeSelect();
     }
   });
-}
+};
 
 document.querySelectorAll('.custom-select').forEach(initCustomSelect);

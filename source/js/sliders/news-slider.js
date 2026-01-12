@@ -1,5 +1,5 @@
-import Swiper from "swiper";
-import { Pagination, Navigation, Grid } from "swiper/modules";
+import Swiper from 'swiper';
+import { Pagination, Navigation, Grid } from 'swiper/modules';
 import 'swiper/css/grid';
 
 
@@ -19,27 +19,25 @@ export const getPaginationRange = (activeInd, total) => {
   return [activeInd - 2, activeInd + 1];
 };
 
-export const renderBullet = (index, className, getContent = (i) => i + 1) => {
-  return `
+export const renderBullet = (index, className, getContent = (i) => i + 1) => `
     <button class="${className}" type="button" aria-label="Перейти к слайду ${index + 1}">${getContent(index)}</button>
   `;
-};
 
 const updatePagination = (slider) => {
   const bullets = slider.pagination.bullets;
   const total = slider.pagination.bullets.length;
   const activeInd = slider.activeIndex;
 
- const moveElem = (elem, elemClass) => {
+  const moveElem = (elem, elemClass) => {
     if (activeInd === 0) {
       elem.classList.add(elemClass);
     } else {
       elem.classList.remove(elemClass);
     }
- }
+  };
 
- moveElem(document.querySelector('.news__pagination'), 'news__pagination--top');
- moveElem(document.querySelector('.news__navigation'), 'news__navigation--top');
+  moveElem(document.querySelector('.news__pagination'), 'news__pagination--top');
+  moveElem(document.querySelector('.news__navigation'), 'news__navigation--top');
 
   const [startInd, endInd] = getPaginationRange(activeInd, total);
 

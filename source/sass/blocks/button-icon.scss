@@ -53,7 +53,7 @@
     background-color: $blue;
     outline: none;
 
-      &::before {
+    &::before {
       background-color: $white;
       transform: rotate(45deg);
     }
