@@ -92,13 +92,13 @@
     <main class="main main-container">
       <h1 class="visually-hidden">Стажировки и волонтёрские программы по всему миру</h1>
 
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="hero__slider swiper">
           <div class="swiper-wrapper">
             <div class="hero__slide hero__slide--bg-1 swiper-slide">
               <div class="container">
                 <div class="hero__slide-content">
-                  <h2 class="hero__slide-title hero__slide-title--first nebo nebo--tr" role="region" aria-label="Глобальный профессиональный опыт обучения за рубежом">Глобальный профессиональный опыт обучения<br> за рубежом</h2>
+                  <h2 class="hero__slide-title hero__slide-title--first nebo nebo--tr" aria-label="Глобальный профессиональный опыт обучения за рубежом">Глобальный профессиональный опыт обучения<br> за рубежом</h2>
                   <span class="hero__slide-angle"></span>
 
                   <div class="hero__slide-content-inner nebo nebo--br">
@@ -116,7 +116,7 @@
             <div class="hero__slide hero__slide--bg-2 swiper-slide">
               <div class="container">
                 <div class="hero__slide-content">
-                  <h2 class="hero__slide-title nebo nebo--tr" role="region" aria-label="Волонтёрские программы – внесите свой вклад в общество">Волонтёрские программы – внесите свой вклад в общество</h2>
+                  <h2 class="hero__slide-title nebo nebo--tr" aria-label="Волонтёрские программы – внесите свой вклад в общество">Волонтёрские программы – внесите свой вклад в общество</h2>
                   <span class="hero__slide-angle"></span>
 
                   <div class="hero__slide-content-inner nebo nebo--br">
@@ -134,7 +134,7 @@
             <div class="hero__slide hero__slide--bg-3 swiper-slide">
               <div class="container">
                 <div class="hero__slide-content">
-                  <h2 class="hero__slide-title nebo nebo--tr" role="region" aria-label="Программы стажировок в крупнейших компаниях мира">Программы стажировок в крупнейших компаниях мира</h2>
+                  <h2 class="hero__slide-title nebo nebo--tr" aria-label="Программы стажировок в крупнейших компаниях мира">Программы стажировок в крупнейших компаниях мира</h2>
                   <span class="hero__slide-angle"></span>
 
                   <div class="hero__slide-content-inner nebo nebo--br">
@@ -156,19 +156,19 @@
         </div>
       </section>
 
-      <section class="section about" id="about">
+      <section class="section about" id="about" data-test="about">
         <div class="container">
           <div class="about__wrapper">
             <div class="about__block">
-              <h2 class="section__title" id="about">О проекте «Стажировка»</h2>
+              <h2 class="section__title">О проекте «Стажировка»</h2>
               <p>«Стажировка» — совместный проект правительств и волонтёрских бригад.</p>
             </div>
 
             <div class="about__block">
               <h3>Наша цель</h3>
-              <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
+              <p>Наша деятельность направлена<br> на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя<br> им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
               <div class="about__block-inner">
-                <button class="button" type="button">Подробнее о проекте
+                <button class="button about__button" type="button">Подробнее о проекте
                   <span class="button-icon button-icon--absolute" aria-hidden="true"></span>
                 </button>
               </div>
@@ -179,19 +179,19 @@
               <ul class="about__stats-list">
                 <li class="about__stats-item about__stats-item--programs">
                   <h4>Более 250 программ</h4>
-                  <p>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</p>
+                  <p>учебных и рабочих, разной длительностью<br> от 3 месяцев до 1 года</p>
                 </li>
                 <li class="about__stats-item about__stats-item--participants">
                   <h4>Более 3000 участников</h4>
-                  <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+                  <p>уже успешно прошли программу<br> от «Стажировка»<br> и остались в разных странах</p>
                 </li>
                 <li class="about__stats-item about__stats-item--countries">
-                  <h4>участники из 60 стран</h4>
-                  <p>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</p>
+                  <h4>участники<br> из 60 стран</h4>
+                  <p>студенты со всего мира приезжают на программу «Стажировки»<br> от 3 месяцев до 1 года</p>
                 </li>
                 <li class="about__stats-item about__stats-item--grants">
-                  <h4>от 4 200 $ до 8 400 $</h4>
-                  <p>грант всем участникам для комфортного прохождения программы</p>
+                  <h4>от 4 200 $<br> до 8 400 $</h4>
+                  <p>грант всем участникам<br> для комфортного прохождения программы</p>
                 </li>
               </ul>
             </div>
@@ -199,7 +199,7 @@
         </div>
       </section>
 
-      <section class="section programs" id="programs">
+      <section class="section programs" id="programs" data-test="programs">
         <div class="container">
           <div class="programs__slider swiper">
             <header class="programs__header">
@@ -222,7 +222,7 @@
               <div class="programs__slide programs__slide--bg-2 swiper-slide" id="volunteering">
                 <div class="programs__slide-content nebo nebo--tr">
                   <h3 class="programs__slide-title">Волонтёрство</h3>
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <p>Помогайте другим<br> и развивайте свои<br> лидерские качества.</p>
                   <a class="button-icon programs__slide-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
@@ -237,25 +237,7 @@
                   </a>
                 </div>
               </div>
-              <div class="programs__slide programs__slide--bg-3 swiper-slide" id="learning">
-                <div class="programs__slide-content nebo nebo--tr">
-                  <h3 class="programs__slide-title">Учёба</h3>
-                  <p>Получите образование и измените своё будущее.</p>
-                  <a class="button-icon programs__slide-link" href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-              <div class="programs__slide programs__slide--bg-3 swiper-slide" id="learning">
-                <div class="programs__slide-content nebo nebo--tr">
-                  <h3 class="programs__slide-title">Учёба</h3>
-                  <p>Получите образование и измените своё будущее.</p>
-                  <a class="button-icon programs__slide-link" href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-              <div class="programs__slide programs__slide--bg-3 swiper-slide" id="learning">
+              <div class="programs__slide programs__slide--bg-3 swiper-slide">
                 <div class="programs__slide-content nebo nebo--tr">
                   <h3 class="programs__slide-title">Учёба</h3>
                   <p>Получите образование и измените своё будущее.</p>
@@ -283,12 +265,12 @@
         </div>
       </section>
 
-      <section class="section grant section--highlight" id="grant">
+      <section class="section grant section--highlight" id="grant" data-test="grant">
         <div class="container">
           <div class="grant__wrapper">
             <div class="grant__block">
               <h2 class="section__title">Как поехать</h2>
-              <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+              <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах<br> и городах, в которых можете пройти программу.</p>
               <div class="grant__picture"></div>
             </div>
 
@@ -298,14 +280,14 @@
                 <li class="grant__steps-item">Быть в возрасте от 16 до 30 лет</li>
                 <li class="grant__steps-item">Иметь оконченное среднее образование</li>
                 <li class="grant__steps-item">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</li>
-                <li class="grant__steps-item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</li>
+                <li class="grant__steps-item">За последние 2 года быть<br> не больше 3х месяцев подряд непрерывно в одной стране</li>
               </ol>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section news" id="news">
+      <section class="section news" id="news" data-test="news">
         <div class="container">
           <h2 class="section__title">Новости и материалы</h2>
 
@@ -334,7 +316,7 @@
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-23">23/03/2023</time>
                     <h3 class="news__slide-title">
-                      <a class="news__slide-title-link" href="#" tabindex="-1">Интервью с участницей программы стажировки</a>
+                      <a class="news__slide-title-link news__slide-title-link--1" href="#" tabindex="-1">Интервью<br> с участницей программы стажировки</a>
                     </h3>
                   </div>
                   <div class="news__slide-container">
@@ -350,7 +332,7 @@
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-20">20/03/2023</time>
                     <h3 class="news__slide-title">
-                      <a class="news__slide-title-link" href="#" tabindex="-1">Путешествуем по миру</a>
+                      <a class="news__slide-title-link news__slide-title-link--2" href="#" tabindex="-1">Путешествуем<br> по миру</a>
                     </h3>
                   </div>
                   <div class="news__slide-container">
@@ -393,23 +375,7 @@
                   </div>
                 </div>
               </article>
-              <article class="news__slide swiper-slide news__slide--bg-3" id="newprogram">
-                <div class="news__slide-content">
-                  <div class="news__slide-content-inner nebo nebo--tr">
-                    <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-                    <h3 class="news__slide-title">
-                      <a class="news__slide-title-link" href="#" tabindex="-1">Новая программа волонтёрства</a>
-                    </h3>
-                  </div>
-                  <div class="news__slide-container">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                    <a class="button-icon news__slide-link" href="#">
-                      <span class="visually-hidden">Читать полностью</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-              <article class="news__slide swiper-slide news__slide--bg-2" id="travelling">
+              <article class="news__slide swiper-slide news__slide--bg-2">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-20">20/03/2023</time>
@@ -425,23 +391,7 @@
                   </div>
                 </div>
               </article>
-              <article class="news__slide swiper-slide news__slide--bg-4" id="career">
-                <div class="news__slide-content">
-                  <div class="news__slide-content-inner nebo nebo--tr">
-                    <time class="news__date" datetime="2023-03-10">10/03/2023</time>
-                    <h3 class="news__slide-title">
-                      <a class="news__slide-title-link" href="#" tabindex="-1">Построй свою карьеру</a>
-                    </h3>
-                  </div>
-                  <div class="news__slide-container">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <a class="button-icon news__slide-link" href="#">
-                      <span class="visually-hidden">Читать полностью</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-              <article class="news__slide swiper-slide news__slide--bg-3" id="newprogram">
+              <article class="news__slide swiper-slide news__slide--bg-3">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-17">17/03/2023</time>
@@ -457,7 +407,7 @@
                   </div>
                 </div>
               </article>
-              <article class="news__slide swiper-slide news__slide--bg-4" id="career">
+              <article class="news__slide swiper-slide news__slide--bg-4">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-10">10/03/2023</time>
@@ -473,7 +423,7 @@
                   </div>
                 </div>
               </article>
-              <article class="news__slide swiper-slide news__slide--bg-3" id="newprogram">
+              <article class="news__slide swiper-slide news__slide--bg-3">
                 <div class="news__slide-content">
                   <div class="news__slide-content-inner nebo nebo--tr">
                     <time class="news__date" datetime="2023-03-17">17/03/2023</time>
@@ -505,41 +455,41 @@
         </div>
       </section>
 
-      <section class="section faq">
+      <section class="section faq" data-test="FAQ">
         <div class="container">
           <h2 class="section__title">Вопросы и ответы</h2>
           <ul class="faq__list">
             <li class="faq__item">
-              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+              <button class="faq__question" type="button" aria-expanded="false">
                 <span class="faq__text">Кто организатор? Какие сроки у программы?</span>
                 <span class="faq__icon" aria-hidden="true"></span>
               </button>
               <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
             </li>
             <li class="faq__item">
-              <button class="faq__question" type="button" aria-expanded="false">
-                <span class="faq__text">Что такое грант на обучение?</span>
+              <button class="faq__question faq__question--2" type="button" aria-expanded="false">
+                <span class="faq__text">Что такое грант<br> на обучение?</span>
                 <span class="faq__icon" aria-hidden="true"></span>
               </button>
               <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов</p>
             </li>
             <li class="faq__item">
-              <button class="faq__question faq__question--open" type="button" aria-expanded="true">
+              <button class="faq__question faq__question--3 faq__question--open" type="button" aria-expanded="true">
                 <span class="faq__text">Как определяется стоимость программы?</span>
                 <span class="faq__icon" aria-hidden="true"></span>
               </button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              <p>Полная стоимость определяется организаторами в зависимости<br> от направления. В большинстве случаев грант «Стажировка»<br> не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </li>
             <li class="faq__item">
-              <button class="faq__question" type="button" aria-expanded="false">
-                <span class="faq__text">Признаётся ли учёба в рамках проекта для дальнейшего обучения?</span>
+              <button class="faq__question faq__question--4" type="button" aria-expanded="false">
+                <span class="faq__text">Признаётся ли учёба<br> в рамках проекта для дальнейшего обучения?</span>
                 <span class="faq__icon" aria-hidden="true"></span>
               </button>
               <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
             </li>
             <li class="faq__item">
-              <button class="faq__question" type="button" aria-expanded="false">
-                <span class="faq__text">Как выглядит полный процесс регистрации на программу «Стажировка»?</span>
+              <button class="faq__question faq__question--5" type="button" aria-expanded="false">
+                <span class="faq__text">Как выглядит полный процесс регистрации<br> на программу «Стажировка»?</span>
                 <span class="faq__icon" aria-hidden="true"></span>
               </button>
               <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
@@ -548,7 +498,7 @@
         </div>
       </section>
 
-      <section class="section reviews" id="reviews">
+      <section class="section reviews" id="reviews" data-test="reviews">
         <div class="container">
           <div class="reviews__slider swiper">
             <h2 class="section__title">Отзывы</h2>
@@ -559,7 +509,7 @@
                   <div class="reviews__slide-author-wrapper">
                     <picture>
                       <source srcset="img/reviewer-1@1x.webp 1x, img/reviewer-1@2x.webp 2x" type="image/webp" width="60" height="60">
-                      <img class="reviews__slide-photo" src="img/reviewer-1@1x.png" srcset="img/reviewer-1@1x.png 1x, img/reviewer-1@2x.png 2x" alt="Фото Лолы Алекс" loading="lazy">
+                      <img class="reviews__slide-photo" src="img/reviewer-1@1x.png" srcset="img/reviewer-1@1x.png 1x, img/reviewer-1@2x.png 2x" width="60" height="60" alt="Фото Лолы Алекс" loading="lazy">
                     </picture>
 
                     <div class="reviews__slide-author">
@@ -578,8 +528,8 @@
                 </header>
 
                 <blockquote>
-                  <p class="reviews__slide-heading">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
-                  <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+                  <p class="reviews__slide-heading reviews__slide-heading--1">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов<br> в жизни!</p>
+                  <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает<br> её от других программ,<br> и я чувствую огромную благодарность<br> за предоставленную<br> мне возможность.</p>
                 </blockquote>
               </div>
 
@@ -588,7 +538,7 @@
                   <div class="reviews__slide-author-wrapper">
                     <picture>
                       <source srcset="img/reviewer-2@1x.webp 1x, img/reviewer-2@2x.webp 2x" type="image/webp" width="60" height="60">
-                      <img class="reviews__slide-photo" src="img/reviewer-2@1x.png" srcset="img/reviewer-2@1x.png 1x, img/reviewer-2@2x.png 2x" alt="Фото Давида Иванова" loading="lazy">
+                      <img class="reviews__slide-photo" src="img/reviewer-2@1x.png" srcset="img/reviewer-2@1x.png 1x, img/reviewer-2@2x.png 2x" width="60" height="60" alt="Фото Давида Иванова" loading="lazy">
                     </picture>
 
                     <div class="reviews__slide-author">
@@ -606,8 +556,8 @@
                   </dl>
                 </header>
                 <blockquote>
-                  <p class="reviews__slide-heading">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
-                  <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу и всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                  <p class="reviews__slide-heading reviews__slide-heading--2">Благодаря опыту стажировки я узнал<br> так много нового о себе и об окружающем мире.</p>
+                  <p>Каждый день был возможностью оказать ощутимое влияние<br> на жизнь других людей. Я бы очень рекомендовал<br> эту волонтёрскую программу всем, кто ищет значимый<br> и незабываемый опыт. Организация была на высшем уровне.<br> Для меня было честью быть частью такой удивительной инициативы.</p>
                 </blockquote>
               </div>
 
@@ -616,7 +566,7 @@
                   <div class="reviews__slide-author-wrapper">
                     <picture>
                       <source srcset="img/reviewer-2@1x.webp 1x, img/reviewer-2@2x.webp 2x" type="image/webp" width="60" height="60">
-                      <img class="reviews__slide-photo" src="img/reviewer-2@1x.png" srcset="img/reviewer-2@1x.png 1x, img/reviewer-2@2x.png 2x" alt="Фото Давида Иванова" loading="lazy">
+                      <img class="reviews__slide-photo" src="img/reviewer-2@1x.png" srcset="img/reviewer-2@1x.png 1x, img/reviewer-2@2x.png 2x" width="60" height="60" alt="Фото Давида Иванова" loading="lazy">
                     </picture>
 
                     <div class="reviews__slide-author">
@@ -654,7 +604,7 @@
         </div>
       </section>
 
-      <section class="section contacts section--highlight" id="contacts">
+      <section class="section contacts section--highlight" id="contacts" data-test="contacts">
         <div class="container">
           <div class="contacts__wrapper">
             <h2 class="section__title">Контакты</h2>
@@ -679,12 +629,13 @@
               <source media="(min-width: 1440px)" srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x" type="image/webp" width="1240" height="486">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x" type="image/webp" width="678" height="500">
               <source srcset="img/map/map-mobile@1x.webp 1x, img/map/map-mobile@2x.webp 2x" type="image/webp" width="290" height="240">
-              <img src="img/map/map-mobile@1x.jpg" srcset="img/map/map-mobile@1x.jpg 1x, img/map/map-mobile@2x.jpg 2x" alt="Карта с расположением центрального офиса по адресу: г. Новосибирск, ул. Щетинкина 68" loading="lazy">
+              <img src="img/map/map-mobile@1x.jpg" srcset="img/map/map-mobile@1x.jpg 1x, img/map/map-mobile@2x.jpg 2x" width="290" height="240" alt="Карта с расположением центрального офиса по адресу: г. Новосибирск, ул. Щетинкина 68" loading="lazy">
             </picture>
           </div>
+        </div>
       </section>
 
-      <section class="section feedback">
+      <section class="section feedback" data-test="form">
         <div class="container">
           <div class="feedback__container">
             <div class="feedback__inner">
@@ -702,15 +653,15 @@
                   <input class="form__input" type="tel" id="phone" name="phone" inputmode="tel" pattern="\+7\d{10}" title="Введите номер телефона в формате +79998883322" required>
                 </div>
 
-                <div class="form__group">
+                <div class="form__group form__group--textarea">
                   <label class="form__label" for="message">Ваше сообщение</label>
-                  <textarea class="form__input" id="message" name="message" rows="3"></textarea>
+                  <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
                 </div>
 
-                <div class="form__group">
+                <div class="form__group form__group--select">
                   <label class="form__label" for="city" id="city-label">Выберите город</label>
                   <select class="visually-hidden" id="city" name="city" aria-labelledby="city-label" tabindex="-1" required>
-                    <option value="" disabled selected></option>
+                    <option value="" disabled selected label="Выберите ваш город"></option>
                     <option value="saint-petersburg">Санкт-Петербург</option>
                     <option value="moscow">Москва</option>
                     <option value="yekaterinburg">Екатеринбург</option>
@@ -724,7 +675,8 @@
                             aria-haspopup="listbox"
                             aria-controls="custom-listbox"
                             aria-labelledby="city-label custom-select-button-text"
-                            title="Выберите ваш город">
+                            title="Выберите ваш город"
+                            aria-label="Выбор города">
                       <span class="custom-select__button-text" id="custom-select-button-text"></span>
                     </button>
 
@@ -737,11 +689,11 @@
                   </div>
                 </div>
 
-                <div class="form__group">
+                <div class="form__group form__group--checkbox">
                   <label class="form__checkbox-label">
                     <input class="form__checkbox-input visually-hidden" type="checkbox" name="consent" required>
                     <span class="form__checkbox-mark"></span>
-                    <span class="form__checkbox-text">Я согласен на обработку моих персональных данных</span>
+                    <span class="form__checkbox-text">Я согласен на обработку моих персональных<br> данных</span>
                   </label>
                 </div>
 
@@ -755,7 +707,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="container">
         <div class="footer__wrapper">
           <div class="logo footer__logo">
@@ -788,23 +740,23 @@
             </ul>
           </nav>
 
-          <a class="footer__policy-link" href="#" target="_blank">Политика конфиденциальности</a>
+          <a class="footer__policy-link" href="#" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
 
           <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
 
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <a class="footer__social-link" href="#" target="_blank" aria-label="Мы Вконтакте">
+              <a class="footer__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мы Вконтакте">
                 <span class="footer__social-icon footer__social-icon--vk" aria-hidden="true"></span>
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="#" target="_blank" aria-label="Мы в одноклассниках">
+              <a class="footer__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мы в одноклассниках">
                 <span class="footer__social-icon footer__social-icon--ok" aria-hidden="true"></span>
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="#" target="_blank" aria-label="Мы в реддите">
+              <a class="footer__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мы в реддите">
                 <span class="footer__social-icon footer__social-icon--reddit" aria-hidden="true"></span>
               </a>
             </li>
@@ -835,7 +787,7 @@
             <div class="form__group">
               <label class="form__label" for="modal-city" id="modal-city-label">Выберите город</label>
               <select class="visually-hidden" id="modal-city" name="city" aria-labelledby="modal-city-label" tabindex="-1" required>
-                <option value="" disabled selected></option>
+                <option value="" disabled selected label="Выберите ваш город"></option>
                 <option value="saint-petersburg">Санкт-Петербург</option>
                 <option value="moscow">Москва</option>
                 <option value="yekaterinburg">Екатеринбург</option>
@@ -848,7 +800,8 @@
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-controls="modal-custom-listbox"
-                        aria-labelledby="modal-city-label modal-custom-select-button-text">
+                        aria-labelledby="modal-city-label modal-custom-select-button-text"
+                        aria-label="Выбор города">
                   <span class="custom-select__button-text" id="modal-custom-select-button-text"></span>
                 </button>
 
@@ -877,13 +830,13 @@
       </div>
     </div>
 
-    <div class="result-modal result-modal--closed" id="resultModal">
+    <div class="result-modal result-modal--closed">
       <div class="result-modal__body">
         <button class="close-button close-button--dark" type="button" aria-label="Закрыть окно"></button>
 
         <div class="result-modal__content">
           <div class="result-modal__icon"></div>
-          <h3 class="result-modal__title"></h3>
+          <h3 class="result-modal__title">Успешно!</h3>
           <p class="result-modal__message"></p>
         </div>
       </div>

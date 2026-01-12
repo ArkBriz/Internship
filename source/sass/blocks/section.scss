@@ -1,12 +1,16 @@
 .section {
-  padding-block: 50px;
+  padding-block: 51px;
+
+  @include media("tablet") {
+    padding-block: 50px;
+  }
 
   @include media("desktop") {
-    padding-block: 60px;
+    padding-block: 70px;
   }
 
   &--highlight {
-    padding-block: 70px;
+    padding-block: 71px;
     color: $white;
     background-color: $blue;
 
@@ -17,6 +21,54 @@
     @include media("desktop") {
       padding-block: 120px;
     }
+  }
+}
+
+.section.programs {
+  padding-top: 56px;
+  padding-bottom: 50px;
+
+  @include media("tablet") {
+    padding-top: 50px;
+    padding-bottom: 48px;
+  }
+
+  @include media("desktop") {
+    padding-top: 61px;
+    padding-bottom: 58px;
+  }
+}
+
+.section.reviews {
+  padding-top: 56px;
+  padding-bottom: 50px;
+
+  @include media("tablet") {
+    padding-top: 50px;
+    padding-bottom: 48px;
+  }
+
+  @include media("desktop") {
+    padding-top: 65px;
+    padding-bottom: 58px;
+  }
+}
+
+.section.news {
+  @include media("desktop") {
+    padding-top: 60px;
+  }
+}
+
+.section.contacts {
+  padding-top: 76px;
+
+  @include media("tablet") {
+    padding-top: 100px;
+  }
+
+  @include media("desktop") {
+    padding-top: 121px;
   }
 }
 
@@ -44,7 +96,21 @@
 
 .about .section__title,
 .grant .section__title {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  margin-left: 1px;
+
+  @include media("tablet") {
+    margin-bottom: 31px;
+    margin-left: 0;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 30px;
+  }
+}
+
+.grant .section__title {
+  margin-left: 0;
 
   @include media("tablet") {
     margin-bottom: 30px;
@@ -52,11 +118,12 @@
 }
 
 .programs .section__title {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   @include media("tablet") {
     max-width: 425px;
     margin-bottom: 43px;
+    margin-top: 3px;
   }
 
   @include media("desktop") {
@@ -66,7 +133,7 @@
 }
 
 .news .section__title {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   text-align: center;
 
   @include media("tablet") {
@@ -74,12 +141,12 @@
   }
 
   @include media("desktop") {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 
 .faq .section__title {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   text-align: center;
 
   @include media("tablet") {
@@ -87,18 +154,19 @@
   }
 
   @include media("desktop") {
-    margin-bottom: 70px;
+    margin-bottom: 72px;
   }
 }
 
 .reviews .section__title {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   @include media("tablet") {
     margin-bottom: 40px;
   }
 
   @include media("desktop") {
+    padding-left: 3px;
     margin-bottom: 45px;
   }
 }
@@ -111,6 +179,7 @@
   }
 
   @include media("desktop") {
+    margin-top: -2px;
     margin-bottom: 0;
   }
 }

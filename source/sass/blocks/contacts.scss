@@ -26,12 +26,12 @@
   @include media("desktop") {
     grid-template-columns: 263px 132px 104px;
     margin-bottom: 40px;
-    column-gap: 52.5px;
+    gap: 19px 52.5px;
   }
 }
 
 .contacts__term {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
 
 .contacts__definition {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -61,6 +61,10 @@
   }
 
   @include media("desktop") {
+    &:first-of-type {
+      margin-top: 4px;
+    }
+
     & br {
       display: block;
     }
@@ -95,6 +99,10 @@
 .contacts__map {
   padding-top: 30px;
   border-top: 2px solid rgba($white, 0.2);
+
+  @include media("desktop") {
+    padding-top: 40px;
+  }
 }
 
 .contacts__map img {

@@ -1,8 +1,12 @@
 .header {
   position: relative;
-  padding-top: 20px;
+  padding-top: 19px;
   z-index: 30;
   background-color: transparent;
+
+  @include media("tablet") {
+    padding-top: 30px;
+  }
 }
 
 .header__inner {
@@ -58,7 +62,7 @@
   display: inline-block;
   top: 0;
   bottom: 0;
-  right: 5px;
+  right: 4px;
   margin: auto;
   width: 34px;
   height: 34px;

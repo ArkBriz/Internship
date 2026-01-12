@@ -4,8 +4,8 @@
 
 .custom-select__button {
   position: relative;
-  width: 100%;
-  min-height: 50px;
+  width: 96%;
+  min-height: 52px;
   margin-bottom: 4px;
   padding: 17px 40px 17px 20px;
   font-size: 14px;
@@ -25,7 +25,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    right: 21px;
+    right: 19px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -34,6 +34,10 @@
 
   &[aria-expanded="true"]::before {
     transform: rotate(180deg);
+  }
+
+  @include media("tablet") {
+    width: 100%;
   }
 
   &:hover,

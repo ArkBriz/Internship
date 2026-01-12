@@ -1,6 +1,6 @@
 .feedback {
-  padding-top: 43px;
-  padding-bottom: 40px;
+  padding-top: 83px;
+  padding-bottom: 80px;
 
   background-image:
     image-set(
@@ -9,13 +9,29 @@
       url("../../img/bg/big-city-tablet@1x.jpg") 1x,
       url("../../img/bg/big-city-tablet@2x.jpg") 2x
     );
-  background-size: 625px;
+  background-size: 629px;
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center 40px;
 
   @include media("tablet") {
     padding-block: 50px;
     background-image: none;
+  }
+
+  @include media("desktop") {
+    padding-block: 60px;
+  }
+}
+
+.feedback .container {
+  padding: 0 10px;
+
+  @include media("tablet") {
+    padding: 0 58px;
+  }
+
+  @include media("desktop") {
+    padding: 0 100px;
   }
 }
 

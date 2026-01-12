@@ -1,11 +1,12 @@
 .button {
   position: relative;
   display: inline-block;
-  padding: 15px 60px 15px 20px;
+  padding: 16px 60px 14px 20px;
   font-size: 12px;
   line-height: 1;
   font-weight: 500;
   color: $blue;
+  letter-spacing: 0.2px;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -18,7 +19,11 @@
 
   @include media("tablet") {
     font-size: 14px;
-    padding: 20px 80px 20px 30px;
+    padding: 20px 71px 20px 20px;
+  }
+
+  @include media("tablet") {
+    padding: 21px 71px 22px 20px;
   }
 
   &--dark {

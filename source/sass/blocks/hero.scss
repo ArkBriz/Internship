@@ -1,11 +1,19 @@
 .hero__slider {
   position: relative;
-  margin-top: -100px;
+  margin-top: -77px;
+
+  @include media("tablet") {
+    margin-top: -86px;
+  }
+
+  @include media("desktop") {
+    margin-top: -126px;
+  }
 }
 
 .hero__slide {
   position: relative;
-  padding-top: 203px;
+  padding-top: 204px;
   padding-bottom: 20px;
 
   background-repeat: no-repeat;
@@ -20,7 +28,7 @@
         url("../../img/bg/hero-1@1x.jpg") 1x,
         url("../../img/bg/hero-1@2x.jpg") 2x
       );
-    background-position: calc(50% - 20px) 0;
+    background-position: calc(50% - 14px) 0;
   }
 
   &--bg-2 {
@@ -44,11 +52,11 @@
   }
 
   @include media("tablet") {
-    padding-top: 687px;
+    padding-top: 647px;
     padding-bottom: 60px;
 
     &--bg-1 {
-      background-position: center 0;
+      background-position: calc(50% + 11px) 0;
     }
 
     &--bg-3 {
@@ -61,7 +69,7 @@
     padding-top: 433px;
 
     &--bg-1 {
-      background-position: center -65px;
+      background-position: center -40px;
     }
 
     &--bg-3 {
@@ -97,7 +105,7 @@
 .hero__slide-title {
   position: relative;
   margin: 0;
-  padding: 48px 15px 16px;
+  padding: 47px 14px 16px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -111,7 +119,7 @@
   --nb-h: 3px;
 
   @include media("tablet") {
-    padding: 70px 40px 24px;
+    padding: 71px 40px 24px;
     font-size: 36px;
     line-height: 44px;
     border-top-left-radius: 20px;
@@ -119,7 +127,7 @@
     border-bottom-right-radius: 30px;
     --nb-r: 20px;
     --nb-w: 520px;
-    --nb-h: -7px;
+    --nb-h: 0px;
 
     &--first {
       br {
@@ -164,12 +172,12 @@
 
 .hero__slide-content-inner {
   width: 267px;
-  padding: 0 15px 10px;
+  padding: 0 14px 10px;
   background-color: $white;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   --nb-r: 12px;
-  --nb-w: 55px;
+  --nb-w: 59px;
   --nb-h: 40px;
 
   @include media("tablet") {
@@ -191,6 +199,7 @@
     grid-template-columns: 391px 1fr;
     column-gap: 85px;
     width: 775px;
+    padding: 0 50px 33px;
   }
 }
 
@@ -207,6 +216,7 @@
 
   @include media("desktop") {
     width: 417px;
+    line-height: 27px;
 
     & br {
       display: none;
@@ -216,15 +226,23 @@
 
 .hero__slide-button {
   margin-top: 25px;
+  margin-left: 1px;
 
   @include media("tablet") {
     grid-column: 2 / 3;
     width: 198px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-left: 0;
+    margin-bottom: 11px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @include media("desktop") {
+    &:first-child {
+      margin-top: 11px;
     }
   }
 }
@@ -241,12 +259,12 @@
   position: absolute;
   display: flex;
   gap: 12px;
-  top: 211px;
+  top: 212px;
   left: 31px;
   z-index: 5;
 
   @include media("tablet") {
-    top: 700px;
+    top: 661px;
     left: 65px;
   }
 

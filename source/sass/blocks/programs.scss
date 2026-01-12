@@ -32,6 +32,7 @@
 
     &--upper {
       display: block;
+      padding-bottom: 19px;
     }
 
     &--lower {
@@ -81,8 +82,8 @@
         url("../../img/bg/programs-1@1x.jpg") 1x,
         url("../../img/bg/programs-1@2x.jpg") 2x
       );
-    background-size: 480px;
-    background-position: -40px -320px;
+    background-size: 472px;
+    background-position: -38px -308px;
   }
 
   &--bg-2 {
@@ -116,30 +117,35 @@
 
     &--bg-1 {
       background-size: 494px;
+      background-position: -40px -322px;
+    }
+
+    &--bg-2 {
+      background-position: -166px 0;
     }
 
     &--bg-3 {
       background-size: 390px;
-      background-position: -68px -148px;
+      background-position: -70px -146px;
     }
   }
 
   @include media("desktop") {
     width: 392px;
-    padding: 17px 20px;
+    padding: 15px 20px;
 
     &--bg-1 {
-      background-size: 526px;
-      background-position: -18px -355px;
+      background-size: 510px 786px;
+      background-position: -16px -359px;
     }
 
     &--bg-2 {
-      background-position: -128px 0;
+      background-position: -129px 0;
     }
 
     &--bg-3 {
       background-size: 440px;
-      background-position: -21px -219px;
+      background-position: -22px -217px;
     }
   }
 
@@ -179,40 +185,63 @@
   background-color: $white;
   border-radius: 12px;
   z-index: 2;
-  --nb-r: 16px;
-  --nb-h: 5px;
-  --nb-w: 95px;
+  --nb-r: 17px;
+  --nb-h: 8px;
+  --nb-w: 90px;
 
   @include media("tablet") {
-    width: 263px;
+    width: 284px;
     min-height: 125px;
-    --nb-w: 55px;
+    padding-top: 19px;
+    --nb-w: 77px;
+    --nb-h: 4px;
   }
 
   @include media("desktop") {
     width: 321px;
-    --nb-h: 10px;
-    --nb-w: 95px;
+    --nb-h: 7px;
+    --nb-w: 92px;
   }
 }
 
 .programs__slide-title {
   width: 120px;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: $blue;
 
   @include media("tablet") {
+    width: 140px;
+    margin-bottom: 16px;
     font-size: 20px;
     line-height: 14px;
   }
 
   @include media("desktop") {
+    width: 165px;
     font-size: 24px;
     line-height: 17px;
+  }
+}
+
+.programs__slide--bg-1 .programs__slide-link {
+  @include media("desktop") {
+    margin-top: 11px;
+  }
+}
+
+.programs__slide--bg-2 br {
+  display: none;
+
+  @include media("tablet") {
+    display: block;
+  }
+
+  @include media("desktop") {
+    display: none;
   }
 }
 
@@ -240,6 +269,11 @@
   align-self: center;
   width: 30px;
   height: 30px;
+
+  @include media("desktop") {
+    align-self: start;
+    margin-top: 3px;
+  }
 }
 
 .programs__scrollbar {
@@ -270,14 +304,17 @@
 .programs__navigation {
   position: absolute;
   display: flex;
-  bottom: 0;
-  right: 0;
+  top: -2px;
+  right: 1px;
+  gap: 6px;
 
   @include media("tablet") {
-    right: 45px;
+    top: auto;
+    bottom: 2px;
+    right: 47px;
   }
 
   @include media("desktop") {
-    right: 0;
+    right: 1px;
   }
 }

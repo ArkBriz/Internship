@@ -1,14 +1,15 @@
 .grant__wrapper {
   display: grid;
-  gap: 30px;
+  gap: 40px;
 
   @include media("tablet") {
-    gap: 40px;
+    gap: 51px;
   }
 
   @include media("desktop") {
     grid-template-columns: repeat(2, 498px);
     column-gap: 138px;
+    row-gap: 40px;
   }
 }
 
@@ -18,7 +19,31 @@
 
   @include media("tablet") {
     width: 498px;
+    margin-bottom: 39px;
+  }
+
+  @include media("desktop") {
     margin-bottom: 40px;
+  }
+}
+
+.grant__block:first-child br {
+  display: none;
+
+  @include media("tablet") {
+    display: block;
+  }
+}
+
+.grant__block:nth-child(2) {
+  @include media("desktop") {
+    padding-top: 10px;
+  }
+}
+
+.grant__block:nth-child(2) br {
+  @include media("desktop") {
+    display: none;
   }
 }
 
@@ -39,31 +64,36 @@
   @include media("tablet") {
     width: 678px;
     height: 375px;
-    background-size: 678px 416px;
+    background-size: 678px 469px;
+    background-position: 0 -47px;
   }
 
   @include media("desktop") {
     width: 498px;
     height: 363px;
     background-size: cover;
+    background-position: 0 0;
   }
 }
 
 .grant__subtitle {
+  width: 210px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
 
   @include media("tablet") {
-    margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 45px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @include media("desktop") {
-    margin-bottom: 40px;
+    width: 375px;
+    margin-bottom: 55px;
     font-size: 32px;
     line-height: 36px;
   }
@@ -85,12 +115,14 @@
 
   @include media("desktop") {
     grid-template-columns: auto;
+    row-gap: 23px;
   }
 }
 
 .grant__steps-item {
   position: relative;
   padding: 25px;
+  padding-block: 24px;
   border: 1px solid $beige;
   border-radius: 16px;
   counter-increment: item 1;
@@ -111,6 +143,7 @@
   }
 
   @include media("tablet") {
+    padding-block: 30px;
 
     &::before {
       top: -14px;

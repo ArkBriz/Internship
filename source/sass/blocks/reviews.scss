@@ -24,17 +24,19 @@
 .reviews__slide {
   position: relative;
   max-width: 290px;
-  padding: 32px 17px;
+  padding: 30px 15px;
   border: 2px solid $blue;
   border-radius: 16px;
 
   @include media("tablet") {
     max-width: 560px;
-    padding: 52px;
+    padding: 50px;
   }
 
   @include media("desktop") {
     max-width: 604px;
+    min-height: 483px;
+    padding-right: 47px;
   }
 }
 
@@ -45,6 +47,11 @@
 
   @include media("tablet") {
     grid-template-columns: repeat(2, max-content);
+    gap: 66px;
+    margin-bottom: 31px;
+  }
+
+  @include media("desktop") {
     justify-content: space-between;
     margin-bottom: 30px;
   }
@@ -139,19 +146,72 @@
   color: $blue;
 
   @include media("tablet") {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     font-size: 20px;
     line-height: 24px;
   }
 
   @include media("desktop") {
+    margin-bottom: 25px;
     font-size: 24px;
     line-height: 26px;
   }
 }
 
+.reviews__slide-heading--1 br {
+  display: none;
+
+  @include media("desktop") {
+    display: block;
+  }
+}
+
+.reviews__slide-heading--2 br {
+  display: none;
+
+  @include media("desktop") {
+    display: block;
+  }
+}
+
 .reviews__slide-heading + p {
   margin: 0;
+}
+
+.reviews__slide-heading--1 + p br {
+  &:nth-child(2) {
+    display: none;
+  }
+
+  @include media("tablet") {
+    display: none;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+
+  @include media("desktop") {
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.reviews__slide-heading--2 + p br {
+  display: none;
+
+  @include media("tablet") {
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+
+  @include media("desktop") {
+    display: block;
+  }
 }
 
 .reviews__scrollbar {
@@ -182,13 +242,15 @@
 .reviews__navigation {
   position: absolute;
   display: flex;
-  top: 0;
-  right: 0;
+  top: -2px;
+  right: 2px;
+  gap: 5px;
 
   @include media("tablet") {
     top: auto;
-    bottom: 0;
-    right: 45px;
+    bottom: 2px;
+    right: 46px;
+    gap: 8px;
   }
 
   @include media("desktop") {

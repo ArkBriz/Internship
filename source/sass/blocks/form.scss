@@ -1,5 +1,33 @@
 .form__group {
   margin-bottom: 20px;
+
+  &--textarea {
+    margin-bottom: 15px;
+  }
+
+  &--select {
+    margin-bottom: 17px;
+  }
+
+  &--checkbox {
+    margin-bottom: 19px;
+  }
+
+  @include media("tablet") {
+    &--checkbox {
+      margin-bottom: 31px;
+    }
+  }
+
+  @include media("desktop") {
+    &--textarea {
+      margin-bottom: 9px;
+    }
+
+    &--select {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .form__label {
@@ -34,10 +62,25 @@
     border 0.3s,
     background-color 0.3s;
 
+  &--textarea {
+    min-height: 94px;
+    resize: none;
+  }
+
   @include media("tablet") {
     font-size: 16px;
     line-height: 24px;
-    padding: 14px 18px;
+    padding: 12px 18px;
+
+    &--textarea {
+      min-height: 88px;
+    }
+  }
+
+  @include media("desktop") {
+    &--textarea {
+      min-height: 90px;
+    }
   }
 
   &:hover,
@@ -59,10 +102,6 @@
   }
 }
 
-textarea {
-  resize: none;
-}
-
 .form__checkbox-label {
   display: flex;
   align-items: center;
@@ -75,9 +114,14 @@ textarea {
   display: block;
   width: 20px;
   height: 20px;
+  margin-bottom: 3px;
   background-color: $white;
   border-radius: 2px;
   transition: background-color 0.3s ease;
+
+  @include media("tablet") {
+    margin-bottom: 9px;
+  }
 }
 
 .form__checkbox-input:checked + .form__checkbox-mark {
@@ -124,22 +168,30 @@ textarea {
 }
 
 .form__checkbox-text {
-  width: 155px;
+  width: 175px;
   font-size: 12px;
   line-height: 14px;
 
   @include media("tablet") {
     width: 100%;
+    margin-top: -7px;
     font-size: 12px;
     line-height: 12px;
   }
 }
 
+.form__checkbox-text br {
+  @include media("tablet") {
+    display: none;
+  }
+}
+
 .form__button {
-  width: 100%;
+  width: 96%;
 
   @include media("tablet") {
     width: 352px;
+    padding-block: 20px;
   }
 
   @include media("desktop") {
